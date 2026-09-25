@@ -1,0 +1,18 @@
+# Dossier de rendu généré par la commande 'hugo'
+public/
+
+# Dossier de ressources et de cache Hugo (images redimensionnées, modules téléchargés, etc.)
+resources/_gen/
+.hugo_build.lock
+
+# Cache local des modules Go / Hugo
+go.sum
+
+# Fichiers d'environnement et secrets (ex: clés API Brevo)
+.env
+
+# Fichiers système et d'éditeurs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
