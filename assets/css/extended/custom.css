@@ -1,0 +1,37 @@
+.article-image {
+    max-width: 40%;
+    height: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.0rem;
+}
+
+.article-image-left {
+    float: left;
+    margin-right: 1.5rem !important;
+}
+
+.article-image-right {
+    float: right;
+    margin-left: 1.5rem !important;
+}
+
+/* Sur mobile, l'image prend toute la largeur */
+@media (max-width: 600px) {
+    .article-image {
+        float: none;
+        display: block;
+        max-width: 100%;
+        width: 100% !important;
+        margin: 1rem auto;
+    }
+}
+
+.clear-float {
+    clear: both;
+}
+
+.post-content p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
