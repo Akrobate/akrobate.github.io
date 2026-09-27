@@ -1,0 +1,42 @@
+<!-- layouts/shortcodes/image-glightbox.html -->
+{{ $src := .Get "src" }}
+{{ $caption := .Get "caption" | default (.Get "alt") }}
+{{ $title := .Get "title" | default $caption }}
+{{ $group := .Get "group" | default "page-gallery" }}
+
+{{ $img := .Page.Resources.GetMatch $src }}
+
+<figure class="glightbox-figure" style="text-align: center; margin: 1.5rem 0;">
+  {{ if $img }}
+    {{ $thumb := $img.Resize "1000x" }}
+    <a href="{{ $img.RelPermalink }}" 
+       class="glightbox" 
+       data-gallery="{{ $group }}" 
+       data-title="{{ $title }}" 
+       data-description="{{ $caption }}">
+      <img src="{{ $thumb.RelPermalink }}" 
+           alt="{{ $caption }}" 
+           width="{{ $thumb.Width }}" 
+           height="{{ $thumb.Height }}" 
+           loading="lazy"
+           style="border-radius: 8px; max-width: 100%; height: auto;">
+    </a>
+  {{ else }}
+    <a href="{{ $src | safeURL }}" 
+       class="glightbox" 
+       data-gallery="{{ $group }}" 
+       data-title="{{ $title }}" 
+       data-description="{{ $caption }}">
+      <img src="{{ $src | safeURL }}" 
+           alt="{{ $caption }}" 
+           loading="lazy"
+           style="border-radius: 8px; max-width: 100%; height: auto;">
+    </a>
+  {{ end }}
+  
+  {{ with $caption }}
+    <figcaption style="font-size: 0.85em; opacity: 0.8; margin-top: 0.5rem;">
+      {{ . }}
+    </figcaption>
+  {{ end }}
+</figure>

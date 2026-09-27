@@ -3,3 +3,12 @@ locale: en-us
 title: My New Hugo Project
 theme:
   - github.com/adityatelange/hugo-PaperMod
+
+menu:
+  main:
+    - name: Tags
+      url: /tags/
+      weight: 10
+    - name: Test
+      url: /tags/
+      weight: 10
