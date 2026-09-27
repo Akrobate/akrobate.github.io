@@ -12,3 +12,6 @@ menu:
     - name: Test
       url: /tags/
       weight: 10
+    - name: "Catégories"
+      url: "/categories/"
+      weight: 20
