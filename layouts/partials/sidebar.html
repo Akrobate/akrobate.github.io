@@ -5,9 +5,20 @@
       <p>Bienvenue sur mon site !</p>
     </div>
 
-    <div class="">
+    <div>
+      <h3>Catégories</h3>
+      <ul class="categories">
+        {{- range $name, $items := site.Taxonomies.categories }}
+        <li>
+          <a href="{{ "categories/" | relLangURL }}{{ $name | urlize }}">{{ $name | humanize }} ({{ len $items }})</a>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+
+    <div>
       <h3>Tags</h3>
-      <ul class="terms-tags">
+      <ul class="terms-tags-mini">
         {{- range $name, $items := site.Taxonomies.tags }}
         <li>
           <a href="{{ "tags/" | relLangURL }}{{ $name | urlize }}">{{ $name | humanize }} ({{ len $items }})</a>
@@ -16,70 +27,5 @@
       </ul>
     </div>
 
-        <div class="widget">
-      <h3>Catégories</h3>
-      <ul>
-        {{- range $name, $items := site.Taxonomies.categories }}
-        <li>
-          <a href="{{ "categories/" | relLangURL }}{{ $name | urlize }}">{{ $name | humanize }} ({{ len $items }})</a>
-        </li>
-        {{- end }}
-      </ul>
-    </div>
-
-        <div class="widget">
-      <h3>Catégories</h3>
-      <ul>
-        {{- range $name, $items := site.Taxonomies.categories }}
-        <li>
-          <a href="{{ "categories/" | relLangURL }}{{ $name | urlize }}">{{ $name | humanize }} ({{ len $items }})</a>
-        </li>
-        {{- end }}
-      </ul>
-    </div>
-
-        <div class="widget">
-      <h3>Catégories</h3>
-      <ul>
-        {{- range $name, $items := site.Taxonomies.categories }}
-        <li>
-          <a href="{{ "categories/" | relLangURL }}{{ $name | urlize }}">{{ $name | humanize }} ({{ len $items }})</a>
-        </li>
-        {{- end }}
-      </ul>
-    </div>
-
-        <div class="widget">
-      <h3>Catégories</h3>
-      <ul>
-        {{- range $name, $items := site.Taxonomies.categories }}
-        <li>
-          <a href="{{ "categories/" | relLangURL }}{{ $name | urlize }}">{{ $name | humanize }} ({{ len $items }})</a>
-        </li>
-        {{- end }}
-      </ul>
-    </div>
-
-        <div class="widget">
-      <h3>Catégories</h3>
-      <ul>
-        {{- range $name, $items := site.Taxonomies.categories }}
-        <li>
-          <a href="{{ "categories/" | relLangURL }}{{ $name | urlize }}">{{ $name | humanize }} ({{ len $items }})</a>
-        </li>
-        {{- end }}
-      </ul>
-    </div>
-
-        <div class="widget">
-      <h3>Catégories</h3>
-      <ul>
-        {{- range $name, $items := site.Taxonomies.categories }}
-        <li>
-          <a href="{{ "categories/" | relLangURL }}{{ $name | urlize }}">{{ $name | humanize }} ({{ len $items }})</a>
-        </li>
-        {{- end }}
-      </ul>
-    </div>
   </div>
 </aside>
