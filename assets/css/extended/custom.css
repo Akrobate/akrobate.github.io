@@ -124,13 +124,14 @@
   padding: 0px !important;
 }
 
+
+
 /* Rendre la sidebar "sticky" lors du défilement */
 /* 
     position: sticky;
   top: calc(var(--header-height) + 1.5rem);
 */
 .sidebar-inner {
-
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -150,6 +151,10 @@
   font-size: 1.1rem;
 }
 
+.sidebar-inner p {
+  font-size: 1rem;
+}
+
 /* Responsive : repasse sur 1 colonne sous 900px */
 @media (max-width: 900px) {
   .site-layout {
@@ -160,10 +165,21 @@
 
 
 
+/* pinned articles */
+
+.pinned_article {
+  background: var(--entry);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+}
 
 
 
 
+
+
+/* terms-tagmini */
 
 
 .terms-tags-mini {
@@ -186,6 +202,7 @@
     font-size: 0.9rem;
     transition: transform 0.1s;
 }
+
 
 
 

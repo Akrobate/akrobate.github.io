@@ -1,10 +1,12 @@
 <aside class="sidebar">
   <div class="sidebar-inner">
-    <div class="widget">
-      <h3>À propos</h3>
-      <p>Bienvenue sur mon site !</p>
-    </div>
 
+    {{ with site.Data.site_info.about_widget }}    
+    <div class="widget">
+      <h3>{{ .title }}</h3>
+      <p>{{ .text }}</p>
+    </div>
+    {{ end }}
     <div>
       <h3>Catégories</h3>
       <ul class="categories">
@@ -25,6 +27,15 @@
         </li>
         {{- end }}
       </ul>
+    </div>
+
+
+    <div class="pinned_article">
+
+    </div>
+
+    <div>
+      {{- partial "youtube.html" "tFU2nhcu2Fs" }}
     </div>
 
   </div>

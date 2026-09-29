@@ -3,6 +3,8 @@ locale: en-us
 title: My New Hugo Project
 theme:
   - github.com/adityatelange/hugo-PaperMod
+about: Bienvenue sur mon site !
+
 
 menu:
   main:
