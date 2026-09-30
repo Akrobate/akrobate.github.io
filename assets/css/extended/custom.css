@@ -167,12 +167,47 @@
 
 /* pinned articles */
 
-.pinned_article {
+.pinned-article {
   background: var(--entry);
   border-radius: var(--radius);
-  padding: 1.25rem;
+  padding: 0.0rem;
   border: 1px solid var(--border);
+  position: relative;
 }
+
+.pinned-article.has-thumb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.pinned-article.has-thumb .entry-thumb {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+}
+
+.pinned-article.has-thumb .entry-thumb .entry-cover {
+  margin-bottom: 0 !important;
+  height: 100%;
+  width: 100%;
+}
+
+.pinned-article.has-thumb .entry-thumb img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.pinned-article.has-thumb .entry-wrapper {
+  flex: 1;
+  min-width: 0;
+}
+
+
+
 
 
 
