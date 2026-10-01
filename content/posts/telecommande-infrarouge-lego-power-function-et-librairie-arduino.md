@@ -2,9 +2,15 @@
 date: '2026-09-25T14:05:20+02:00'
 draft: false
 title: "Télécommande infrarouge lego power function et librairie arduino"
-tags: ["lego", "arduino", "infrarouge"]
+tags:
+  - arduino
+  - electronique
+  - informatique
+  - lego
+  - lego power functions
+  - librairie arduino
+  - telecommande lego
 categories:
-  - "FPV"
   - "Électronique"
 cover:
   image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXPU_J-0HEu1jI0gn31-R7TtRmdVJXghvDvHDQETRU2bdU8jSRnChfS0WeSrDBAr5J2bmjsiSdZj8wypf9b6N9pky_ON632XFFi3C0_x7Q_XxPFpvWw1i0DZtThVjTdIK7MWGcwU1Z5g4/s1600/telecommande+lego+et+recepteur.JPG" # ou un lien externe / paramètre perso

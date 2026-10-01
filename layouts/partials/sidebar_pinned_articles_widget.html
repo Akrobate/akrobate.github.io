@@ -1,0 +1,23 @@
+
+{{ range site.Data.pinned }}
+
+    {{ $slug := .article }}
+
+    {{ range where site.RegularPages "Slug" $slug }}
+    
+    <div class="pinned-article has-thumb">
+        <div class="entry-thumb">
+            <figure class="entry-cover">
+            <img loading="lazy" src="{{ .Params.cover.image }}" alt="Image d'illustration">
+            </figure>
+        </div>
+        <div ckass="entry-wrapper">
+            <div class="entry-content">
+            <p>{{ .Title }}</p>
+            </div>
+        </div>
+        <a class="entry-link" aria-label="post link to Télécommande infrarouge lego power function et librairie arduino" href="http://localhost:1313/posts/telecommande-infrarouge-lego-power-function-et-librairie-arduino/"></a>
+    </div>
+
+    {{ end }}
+{{ end }}

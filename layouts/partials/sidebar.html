@@ -1,7 +1,7 @@
 <aside class="sidebar">
   <div class="sidebar-inner">
 
-    {{ with site.Data.site_info.about_widget }}    
+    {{ with site.Data.site_info.about_widget }}
     <div class="widget">
       <h3>{{ .title }}</h3>
       <p>{{ .text }}</p>
@@ -29,20 +29,14 @@
       </ul>
     </div>
 
+    <div>
+      <h3>Pinned articles</h3>
 
-    <div class="pinned-article has-thumb">
-      <div class="entry-thumb">
-        <figure class="entry-cover">
-          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXPU_J-0HEu1jI0gn31-R7TtRmdVJXghvDvHDQETRU2bdU8jSRnChfS0WeSrDBAr5J2bmjsiSdZj8wypf9b6N9pky_ON632XFFi3C0_x7Q_XxPFpvWw1i0DZtThVjTdIK7MWGcwU1Z5g4/s1600/telecommande+lego+et+recepteur.JPG" alt="Image d'illustration">
-        </figure>
-      </div>
-      <div ckass="entry-wrapper">
-        <div class="entry-content">
-          <p>Télécommande infrarouge lego power function et librairie arduino...</p>
-        </div>
-      </div>
-      <a class="entry-link" aria-label="post link to Télécommande infrarouge lego power function et librairie arduino" href="http://localhost:1313/posts/telecommande-infrarouge-lego-power-function-et-librairie-arduino/"></a>
+      {{ partial "sidebar_pinned_articles_widget.html" }}
+
+
     </div>
+
 
     <div>
       {{- partial "youtube.html" "tFU2nhcu2Fs" }}

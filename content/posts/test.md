@@ -1,5 +1,5 @@
 ---
-date: '2026-09-25T14:05:20+02:00'
+date: '2026-09-28T14:05:20+02:00'
 draft: true
 title: "Quick test"
 tags: ["lego", "arduino", "infrarouge"]
