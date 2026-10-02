@@ -2,6 +2,7 @@
 date: '2026-09-25T14:05:20+02:00'
 draft: false
 title: "Télécommande infrarouge lego power function et librairie arduino"
+slug: "telecommande"
 tags:
   - arduino
   - electronique
