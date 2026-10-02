@@ -19,6 +19,11 @@
     </div>
 
     <div>
+      <h3>Pinned articles</h3>
+      {{ partial "sidebar_pinned_articles_widget.html" }}
+    </div>
+
+    <div>
       <h3>Tags</h3>
       <ul class="terms-tags-mini">
         {{- range $name, $items := site.Taxonomies.tags }}
@@ -28,15 +33,6 @@
         {{- end }}
       </ul>
     </div>
-
-    <div>
-      <h3>Pinned articles</h3>
-
-      {{ partial "sidebar_pinned_articles_widget.html" }}
-
-
-    </div>
-
 
     <div>
       {{- partial "youtube.html" "tFU2nhcu2Fs" }}

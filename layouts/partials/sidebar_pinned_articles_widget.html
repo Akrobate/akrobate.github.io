@@ -1,4 +1,6 @@
 
+<div class="pinned-article-list">
+
 {{ range site.Data.pinned }}
 
     {{ $slug := .article }}
@@ -16,8 +18,10 @@
             <p>{{ .Title }}</p>
             </div>
         </div>
-        <a class="entry-link" aria-label="post link to Télécommande infrarouge lego power function et librairie arduino" href="http://localhost:1313/posts/telecommande-infrarouge-lego-power-function-et-librairie-arduino/"></a>
+        <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
     </div>
 
     {{ end }}
 {{ end }}
+
+</div>

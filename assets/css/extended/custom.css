@@ -165,7 +165,15 @@
 
 
 
+
 /* pinned articles */
+
+.pinned-article-list {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
 .pinned-article {
   background: var(--entry);
@@ -209,13 +217,7 @@
 
 
 
-
-
-
-
-
 /* terms-tagmini */
-
 
 .terms-tags-mini {
     display: flex;
@@ -237,8 +239,6 @@
     font-size: 0.9rem;
     transition: transform 0.1s;
 }
-
-
 
 
 
