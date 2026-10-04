@@ -1,5 +1,5 @@
 ---
-date: '2026-09-25T14:05:20+02:00'
+date: '2012-12-25T14:05:20+02:00'
 draft: false
 title: "Robot suiveur de balles OpenCV (Projet expérimental)"
 slug: "robot-suiveur-de-balles"

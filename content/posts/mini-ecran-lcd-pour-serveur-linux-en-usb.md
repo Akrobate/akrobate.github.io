@@ -1,5 +1,5 @@
 ---
-date: '2026-09-25T14:05:20+02:00'
+date: '2012-09-09T14:05:20+02:00'
 draft: false
 title: "Interface télécommande RC en Joystick USB"
 slug: "mini-ecran-lcd-en-usb"
@@ -8,7 +8,6 @@ tags:
   - electronique
   - informatique
   - linux
-  - shell
   - teensy
   - usb
 categories:

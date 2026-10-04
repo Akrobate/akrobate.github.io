@@ -5,13 +5,9 @@ theme:
   - github.com/adityatelange/hugo-PaperMod
 about: Bienvenue sur mon site !
 
-
 menu:
   main:
     - name: Tags
-      url: /tags/
-      weight: 10
-    - name: Test
       url: /tags/
       weight: 10
     - name: "Catégories"

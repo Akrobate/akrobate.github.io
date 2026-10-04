@@ -1,5 +1,5 @@
 ---
-date: '2026-09-25T14:05:20+02:00'
+date: '2012-07-22T14:05:20+02:00'
 draft: false
 title: "Interface télécommande RC en Joystick USB"
 slug: "interface-telecommande-rc"
