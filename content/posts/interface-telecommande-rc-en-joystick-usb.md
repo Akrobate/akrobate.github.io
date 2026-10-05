@@ -14,11 +14,10 @@ categories:
   - Électronique
   - RC
 cover:
-  image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSdI7omBFtTyblGgA57jh_4ds2GG0hnn9N53oWp2L3xmRJWhBgt9aEUirkLDcwfG12wAieg6JGmRe__GxVzNzoEC1ezE2jSylgR8NMLyM3LqPpET7sqoaxvvzkFpxYrVFwbAO1873w88c/s1600/P1010424.JPG"
+  image: "/images/interface-telecommande-rc/P1010424.avif"
   alt: "Image d'illustration"
-ShowToc: true
+ShowToc: false
 ---
-
 
 ### Interface télécommande RC en Joystick USB
 

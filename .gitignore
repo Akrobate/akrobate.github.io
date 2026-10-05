@@ -1,5 +1,6 @@
 # Dossier de rendu généré par la commande 'hugo'
 public/
+assets/images/
 
 # Dossier de ressources et de cache Hugo (images redimensionnées, modules téléchargés, etc.)
 resources/_gen/
