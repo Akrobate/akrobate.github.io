@@ -4,6 +4,10 @@ title: My New Hugo Project
 theme:
   - github.com/adityatelange/hugo-PaperMod
 about: Bienvenue sur mon site !
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 
 menu:
   main:
