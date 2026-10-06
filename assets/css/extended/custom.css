@@ -262,12 +262,10 @@
 }
 
 
-
-
 /* Conteneur principal */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur mobile */
+  grid-template-columns: repeat(3, 1fr); /* 2 colonnes sur mobile */
   gap: 1rem;                             /* Espacement entre images */
   margin: 1.5rem 0;
 }
@@ -275,14 +273,14 @@
 /* Passage à 3 colonnes sur PC */
 @media (min-width: 768px) {
   .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 /* S'assure que les figures et images s'adaptent bien */
 .gallery-grid figure,
 .gallery-grid p {
-  margin: 0;
+  margin: 0 !important;
 }
 
 .gallery-grid img {
