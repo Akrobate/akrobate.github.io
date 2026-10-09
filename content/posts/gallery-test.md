@@ -14,14 +14,22 @@ categories:
   - Électronique
   - RC
 cover:
-  image: "/images/interface-telecommande-rc/P1010424.avif"
-  alt: "Image d'illustration"
 ShowToc: false
 ---
 
+---
+
+Local
+
+![Coucou](./images/interface-telecommande-rc/P1010419.avif)
+{ mode="lightbox" miniature-width=200 }
+
+---
 
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDdCOUMc_2sDrI7B8qgv2vPyGIE01acbJWtdj-Zo4zuhdz-b_ZFLDP0W8AOJFOrkivfK9qcN2cRb90dNH5PBAjSESigmE7eWoycIvsSQ9fHDn7Fbyu2XfhPuRLE_5Z17XHtFuCpS5Hwhs/s200/P1010400.JPG)
+![yelloooow ](images/interface-telecommande-rc/P1010419.avif)
+{ mode="" }
+
 
 # Titre h1
 
