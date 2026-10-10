@@ -15,6 +15,7 @@ categories:
 cover:
   image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiF4Ka9T0QYlCSeTm5A_7CDxsN9kCV31AmO2IivK44OBK7VIu5zvl2O6MSxBZdLdfx05QFThp_O7k8O8JJRQuNUAt44n2D7axEKp87lGijXsumnrAqzP2ctFPNaEK1RHhP5D19uwvVwMRE/s1600/P1010484.JPG"
   alt: "Image d'illustration"
+  hiddenInSingle: true
 ---
 
 

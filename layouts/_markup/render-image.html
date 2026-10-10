@@ -1,6 +1,41 @@
 {{- if eq .Attributes.mode "lightbox" -}}
+MODE : LightBox
 
- MODE : LightBox
+{{- $u := urls.Parse .Destination -}}
+{{- $src := $u.String -}}
+{{- $path := strings.TrimPrefix "./" $u.Path }}
+{{- $alt := .Text -}}
+{{- $miniatureWidth := index .Attributes "miniature-width" -}}
+{{- $group := index .Attributes "group" -}}
+{{- $title := index .Attributes "title" -}}
+{{- $caption := index .Attributes "caption" -}}
+
+{{- with or (.PageInner.Resources.Get $path) (resources.Get $path) -}}
+  {{ $thumb := .Resize (printf "%dx" (int $miniatureWidth)) }}
+
+  <figure class="glightbox-figure" style="text-align: center; margin: 1.5rem 0;">
+    <a href="{{ .RelPermalink }}" 
+      class="glightbox" 
+      data-gallery="{{ $group }}" 
+      data-title="{{ $title }}" 
+      data-description="{{ $caption }}">
+      <img src="{{ $thumb.RelPermalink }}" 
+          alt="{{ $alt }}" 
+          width="{{ $thumb.Width }}" 
+          height="{{ $thumb.Height }}" 
+          loading="lazy"
+          style="border-radius: 8px; max-width: 100%; height: auto;">
+    </a>
+    {{ with $caption }}
+    <figcaption style="font-size: 0.85em; opacity: 0.8; margin-top: 0.5rem;">
+      {{ . }}
+    </figcaption>
+    {{ end }}
+  </figure>
+{{- end -}}
+
+{{- else if eq .Attributes.mode "miniature" -}}
+MODE : Miniature
 
 {{- $u := urls.Parse .Destination -}}
 {{- $src := $u.String -}}
@@ -13,9 +48,8 @@
   <img src="{{ $thumb.RelPermalink }}" alt="{{ $alt }}" title="{{ (.Title | transform.HTMLEscape) }}" loading="lazy">
 {{- end -}}
 
-
 {{- else -}}
-  MODE: None
+MODE: None
 
 {{- $u := urls.Parse .Destination -}}
 {{- $src := $u.String -}}

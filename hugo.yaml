@@ -12,7 +12,9 @@ markup:
       attribute:
         block: true
       wrapStandAloneImageWithinParagraph: false
-
+params:
+  cover:
+    hiddenInSingle: true
 
 menu:
   main:

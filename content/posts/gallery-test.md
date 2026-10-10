@@ -22,7 +22,7 @@ ShowToc: false
 Local
 
 ![Coucou](./images/interface-telecommande-rc/P1010419.avif)
-{ mode="lightbox" miniature-width=200 }
+{ mode="lightbox" miniature-width=200 title="Youhou" caption="Yououuuhou caption fuck" }
 
 ---
 
