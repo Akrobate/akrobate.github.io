@@ -12,6 +12,10 @@ markup:
       attribute:
         block: true
       wrapStandAloneImageWithinParagraph: false
+  highlight:
+#    style: "dracula" # Remplacez par le nom du style de votre choix
+#    noClasses: false
+
 params:
   cover:
     hiddenInSingle: true

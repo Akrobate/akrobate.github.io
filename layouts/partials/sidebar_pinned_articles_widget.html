@@ -1,27 +1,25 @@
-
 <div class="pinned-article-list">
-
-{{ range site.Data.pinned }}
-
-    {{ $slug := .article }}
-
-    {{ range where site.RegularPages "Slug" $slug }}
-    
-    <div class="pinned-article has-thumb">
-        <div class="entry-thumb">
-            <figure class="entry-cover">
-            <img loading="lazy" src="{{ .Params.cover.image }}" alt="Image d'illustration">
-            </figure>
-        </div>
-        <div class="entry-wrapper">
-            <div class="entry-content">
-            <p>{{ .Title }}</p>
-            </div>
-        </div>
-        <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+{{- range site.Data.pinned -}}
+    {{- $slug := .article -}}
+    {{- range where site.RegularPages "Slug" $slug -}}
+<div class="pinned-article has-thumb">
+    <div class="entry-thumb">
+        <figure class="entry-cover">
+            {{- with .Params.cover.image -}}
+                {{- with resources.Get . -}}
+                    {{- $img := .Fill "70x70" -}}
+                        <img loading="lazy" src="{{ $img.Permalink }}" alt="Image d'illustration" />
+                {{- end -}}
+            {{- end -}}
+        </figure>
     </div>
-
-    {{ end }}
-{{ end }}
-
+    <div class="entry-wrapper">
+        <div class="entry-content">
+        <p>{{ .Title }}</p>
+        </div>
+    </div>
+    <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+</div>
+    {{- end -}}
+{{- end -}}
 </div>

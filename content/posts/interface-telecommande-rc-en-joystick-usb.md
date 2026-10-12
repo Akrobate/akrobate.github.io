@@ -16,7 +16,9 @@ categories:
 cover:
   image: "/images/interface-telecommande-rc/P1010424.avif"
   alt: "Image d'illustration"
-ShowToc: false
+description: Créez un adaptateur USB pour votre télécommande RC avec Arduino/Teensy. Pilotez vos simulateurs de vol sur PC sans fil via le récepteur radio.
+author: Artiom FEDOROV
+#ShowToc: false
 ---
 
 ![](/images/interface-telecommande-rc/P1010424.avif)
@@ -40,13 +42,13 @@ La partie électronique du montage se limite à un seul composant principal: le 
   
 Une petite astuce pour assurer la connexion  entre le montage et le récepteur consiste à utiliser la connectique des boitiers de PC. En effet dans une tour de pc les boutons et les LEDs de façade se connectent à la carte mère et ces mêmes connecteurs sont parfaitement compatibles avec les pins de votre récepteur. Évidement si vous avez un boitier plastique autour de votre récepteur qui vous impose le détrompeur vous pouvez toujours limer les anges des connecteurs improvisés.
 
-  
-  
+
 ## Le programme informatique
   
 Le programme pour arduino est très simple. Le framework arduino fournit une classe permettant d'utiliser le circuit en tant que joystick. Pour envoyer la position des axes du joystick à l'ordinateur on utilise l'objet Joystick qui comporte plusieurs setters X Y Z et Zrotate. Il suffit d'envoyer un entier compris entre 0 et 1023 représentant la position du joystick. Notez que le neutre correspond a la valeur 512.  
 Pour lire les canaux du récepteur j'ai choisi de coder une classe nommée ServoRead. On créera un objet de cette classe par canal. Le contructeur de l'objet prend en paramètre le numéro de pin de l'arduino (teensy++ dans mon cas).  
-  
+
+
 ### Fichier interfaceRC.ino  
 
 ```cpp
