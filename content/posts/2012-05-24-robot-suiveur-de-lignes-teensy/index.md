@@ -113,3 +113,19 @@ Enfin pour finir, un petit bonnus: J'utilise souvent pour encadrer mes projets l
 [Code source complet du projet robot suiveur de lignes arduino](http://artiom21.free.fr/projets/arduino-robot-line-follower/RobotLineFollow.zip)  
 [Documentation sur l'interface arduino - lego (LegoRC arduino class)](http://artiom-fedorov.blogspot.fr/2012/05/telecommande-infrarouge-lego-power.html)  
 [Documentation sur les capteurs de lignes et classe arduino](http://artiom-fedorov.blogspot.fr/2012/05/capteur-de-lignes-pour-la-robotique-et.html)
+
+
+
+robot-suiveur-de-lignes-main.JPG
+P1010040.JPG
+P1010052.JPG
+P1010053.JPG
+P1010055.JPG
+P1010054.JPG
+P1010042.JPG
+P1010041.JPG
+P1010039.JPG
+P1010038.JPG
+P1010037.JPG
+RobotLineFollower.png
+gant+robot.png
