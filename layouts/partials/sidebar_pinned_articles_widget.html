@@ -1,4 +1,5 @@
 <div class="pinned-article-list">
+{{- $global := . -}}
 {{- range site.Data.pinned -}}
     {{- $slug := .article -}}
     {{- range where site.RegularPages "Slug" $slug -}}
@@ -6,6 +7,8 @@
     <div class="entry-thumb">
         <figure class="entry-cover">
             {{- with .Params.cover.image -}}
+                {{- /* with $global.Resources.Get . */ -}}
+                {{- /* with or (.PageInner.Resources.Get . ) (resources.Get . ) */ -}}
                 {{- with resources.Get . -}}
                     {{- $img := .Fill "70x70" -}}
                         <img loading="lazy" src="{{ $img.Permalink }}" alt="Image d'illustration" />

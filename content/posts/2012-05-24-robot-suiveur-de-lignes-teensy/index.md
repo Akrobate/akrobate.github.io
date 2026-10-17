@@ -16,7 +16,7 @@ tags:
 categories:
   - Robotique
 cover:
-  image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilRTBDsZWxz8a6xB7PrhWRRaR0-rNMneT5OI66S02OBVAvGPoXwemvsX5YNaN94AVUaqIm0hAwZ_N9VzE0zDm79Q3zPorH0vNRH_QshdIbs8e5Ms891YJGwqAwAjEt0XTXk6ll_PcpJjA/s1600/robot-suiveur-de-lignes-main.JPG"
+  image: "/posts/robot-suiveur-de-lignes-teensy/robot-suiveur-de-lignes-main.avif"
   alt: "Image d'illustration"
 ---
 
@@ -37,11 +37,6 @@ En ce qui concerne la fixation de la plaque a essai le hasard fait bien les chos
 
 
 ## Quelques photos du robot
-
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8QT-2Sc6jc8zSdHb47kbtYoq8YzgkN7Cnm9m8uv4XhpmuVfXPmpiQtsK_xM8YoWiBfc05BBkSv-9u49n70ubouvoYxb-HH9uQ9i0489ei2iGC9oMPSVt9DbBRohxOsR5lnvLJ1Yg7-ZQ/s200/P1010052.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8QT-2Sc6jc8zSdHb47kbtYoq8YzgkN7Cnm9m8uv4XhpmuVfXPmpiQtsK_xM8YoWiBfc05BBkSv-9u49n70ubouvoYxb-HH9uQ9i0489ei2iGC9oMPSVt9DbBRohxOsR5lnvLJ1Yg7-ZQ/s1600/P1010052.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRIUYLzf-DPRTOVDlRxD1cTfhhuySwKjSg47liH8JE__dnRAgdcrj6sjyu0f9ieKmm3C-rQXy8610m_y36zT3kTzonDqHTC6qxGDOPmiLKTivswJc5z2IMYTiF1SQrR21sClQJm3SyXng/s200/P1010053.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRIUYLzf-DPRTOVDlRxD1cTfhhuySwKjSg47liH8JE__dnRAgdcrj6sjyu0f9ieKmm3C-rQXy8610m_y36zT3kTzonDqHTC6qxGDOPmiLKTivswJc5z2IMYTiF1SQrR21sClQJm3SyXng/s1600/P1010053.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYZSUZDiJlGeab-pA3zNAGKPG86TN4f6Uh2zwXzHt7HEE1Zfsvl0_cmH8i9KW_xPB4Fb-jAJY252njDRev3EjVZcqXEAeIOFujb9pJ5CLhGZDn_kU3ZXK6mprT1EFK9GusNC5QCAjhzcc/s200/P1010055.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYZSUZDiJlGeab-pA3zNAGKPG86TN4f6Uh2zwXzHt7HEE1Zfsvl0_cmH8i9KW_xPB4Fb-jAJY252njDRev3EjVZcqXEAeIOFujb9pJ5CLhGZDn_kU3ZXK6mprT1EFK9GusNC5QCAjhzcc/s1600/P1010055.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQMSbW273GXtQgmrdPVIpzChKnlY1TxouOUZGDGz8knLXvC_Wi9CiSrfNOfopgE8ycWCWyt5CfeK-VeV4BEJJRLkQiflVp0bRvptwuse81lvz9tTIOiEz9KzfV_dDd0kweDuVLLmF6U9U/s200/P1010054.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQMSbW273GXtQgmrdPVIpzChKnlY1TxouOUZGDGz8knLXvC_Wi9CiSrfNOfopgE8ycWCWyt5CfeK-VeV4BEJJRLkQiflVp0bRvptwuse81lvz9tTIOiEz9KzfV_dDd0kweDuVLLmF6U9U/s1600/P1010054.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCu0aD5Lxeh1Pu_UJyMSsNtVSsY2Ff7lzfO0cvOe0MSml_vCgWWB3sEnBDIpbtqs1tTw-9N93Z3MGzP4qnmnzSemW4iIthd7DgL1xvVDWOs23wl7v6IDoHL_de6QkkEmKwtrZjLuEmNj0/s200/P1010042.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCu0aD5Lxeh1Pu_UJyMSsNtVSsY2Ff7lzfO0cvOe0MSml_vCgWWB3sEnBDIpbtqs1tTw-9N93Z3MGzP4qnmnzSemW4iIthd7DgL1xvVDWOs23wl7v6IDoHL_de6QkkEmKwtrZjLuEmNj0/s1600/P1010042.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgPPd-VJ3-Avmw55aAQNf86ccw2Yjfp3EtE-lVi19oFlz6-lcMAj9XwryiBB1IgZWWMRQ_sqxhUTWbmCn6jeJFXAiI-EYXa1zEaAs_FBF5rGredLjd5F2MNMwTnPPU-5h5F9kJuUajUF4/s200/P1010041.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgPPd-VJ3-Avmw55aAQNf86ccw2Yjfp3EtE-lVi19oFlz6-lcMAj9XwryiBB1IgZWWMRQ_sqxhUTWbmCn6jeJFXAiI-EYXa1zEaAs_FBF5rGredLjd5F2MNMwTnPPU-5h5F9kJuUajUF4/s1600/P1010041.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPfrpkeFJJVl7Q_MlpaBbdjVLl9Pz_lydWUkGXVcKvjeBkXYlHqrD_x4AJRfiAizmzOV1JEVHHwkGmSEV4FrKEwyyCbUPnThsn7NMnOOX3i8ka3X_NjhFMlgguKoskN4aWd1VSNhwk1AA/s200/P1010040.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPfrpkeFJJVl7Q_MlpaBbdjVLl9Pz_lydWUkGXVcKvjeBkXYlHqrD_x4AJRfiAizmzOV1JEVHHwkGmSEV4FrKEwyyCbUPnThsn7NMnOOX3i8ka3X_NjhFMlgguKoskN4aWd1VSNhwk1AA/s1600/P1010040.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirfwL7b5UEar_unoW3g0MuStUQCm8cUK0k43na_E6RFNGLpS6gGXbrsAOucn5AmaFzdFEuufBbjaWdGt2zt5bYCiwp2_smfPZgY7hUlzF-UDQFwS_XUEOftty6ZixJe-fqm2bo0jK7RVY/s200/P1010039.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirfwL7b5UEar_unoW3g0MuStUQCm8cUK0k43na_E6RFNGLpS6gGXbrsAOucn5AmaFzdFEuufBbjaWdGt2zt5bYCiwp2_smfPZgY7hUlzF-UDQFwS_XUEOftty6ZixJe-fqm2bo0jK7RVY/s1600/P1010039.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2RYWLyXw_rrJukw2PtX8tvS8Csp15WBUDG1KwQhgVmtpTon4IZ0lvm5Sw2rVtmnJe5r1eFQQjdAI32hgtXmPlk03JOOzBgGlVc-CbSMSLqx7HW2lKO7e-DlnPQ9gy2KMpi1rKM1C6GBY/s200/P1010038.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2RYWLyXw_rrJukw2PtX8tvS8Csp15WBUDG1KwQhgVmtpTon4IZ0lvm5Sw2rVtmnJe5r1eFQQjdAI32hgtXmPlk03JOOzBgGlVc-CbSMSLqx7HW2lKO7e-DlnPQ9gy2KMpi1rKM1C6GBY/s1600/P1010038.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUVHqjjypC7aRA1GXjHAvuT1p_oWHTOmtQ8NSeZlH41X91agUcD_gYuTOBcV5jY1f6_G0t5-o3Ax_KU5NKXJhyphenhyphen8tytDoCDzJ7w_phMlvq2tiwkXHGymQ5KEq8fhcONPhA9OtQL1PnDs-s/s200/P1010037.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUVHqjjypC7aRA1GXjHAvuT1p_oWHTOmtQ8NSeZlH41X91agUcD_gYuTOBcV5jY1f6_G0t5-o3Ax_KU5NKXJhyphenhyphen8tytDoCDzJ7w_phMlvq2tiwkXHGymQ5KEq8fhcONPhA9OtQL1PnDs-s/s1600/P1010037.JPG)  
-
-
----
 
 {{% gallery %}}
 
@@ -78,11 +73,6 @@ En ce qui concerne la fixation de la plaque a essai le hasard fait bien les chos
 {{% /gallery %}}
 
 
----
-
-
-
-  
 ## Le programme informatique
   
 Le programme informatique pour l'arduino est très simple. On commence par déclarer les capteurs avec en paramètre la broche sur laquelle est branché le capteur. Ensuite on déclare l'objet LegoRC qui permet de communiquer simplement avec les moteurs. Dans la boucle principale on vérifie les capteurs. Si les deux capteurs ne détectent pas de ligne alors le robot avance. Si un des capteurs est actif alors le robot pivote sur lui meme jusqu'a ce que le capteur ne detecte plus à nouveau la ligne.  

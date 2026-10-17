@@ -13,7 +13,7 @@
 {{- with or (.PageInner.Resources.Get $path) (resources.Get $path) -}}
   {{- $thumb := . -}}
   {{- if $miniatureWidth -}}
-    {{- $thumb = .Resize (printf "%dx" (int $miniatureWidth)) -}}
+    {{- $thumb = .Resize (printf "%dx q60" (int $miniatureWidth)) -}}
   {{- end -}}
 <figure class="glightbox-figure {{ $class }}" style="text-align: center; margin: 1.5rem 0;">
   <a href="{{ .RelPermalink }}" 
@@ -38,7 +38,6 @@
 
 
 {{- else if eq .Attributes.mode "miniature" -}}
-MODE : Miniature
 
 {{- $u := urls.Parse .Destination -}}
 {{- $src := $u.String -}}
@@ -52,10 +51,7 @@ MODE : Miniature
 {{- end -}}
 
 
-
-
 {{- else -}}
-MODE: None
 
 {{- $u := urls.Parse .Destination -}}
 {{- $src := $u.String -}}
