@@ -1,17 +1,24 @@
 <div class="pinned-article-list">
-{{- $global := . -}}
+
 {{- range site.Data.pinned -}}
     {{- $slug := .article -}}
     {{- range where site.RegularPages "Slug" $slug -}}
 <div class="pinned-article has-thumb">
     <div class="entry-thumb">
         <figure class="entry-cover">
-            {{- with .Params.cover.image -}}
-                {{- /* with $global.Resources.Get . */ -}}
-                {{- /* with or (.PageInner.Resources.Get . ) (resources.Get . ) */ -}}
-                {{- with resources.Get . -}}
-                    {{- $img := .Fill "70x70" -}}
-                        <img loading="lazy" src="{{ $img.Permalink }}" alt="Image d'illustration" />
+            {{- $page := . -}}
+            {{- with $page.Params.cover.image -}}
+                {{- $rel := strings.TrimPrefix "/" . -}}
+                {{- $res := or
+                    ($page.Resources.Get (path.Base .))
+                    (resources.Get $rel)
+                    (resources.Get .)
+                -}}
+                {{- with $res -}}
+                    {{- $img := .Fill "70x70 Center" -}}
+                    <img loading="lazy" src="{{ $img.RelPermalink }}" alt="{{ $page.Params.cover.alt | default "Image d'illustration" }}" />
+                {{- else -}}
+                    <img loading="lazy" src="{{ . | absURL }}" alt="{{ $page.Params.cover.alt | default "Image d'illustration" }}" />
                 {{- end -}}
             {{- end -}}
         </figure>

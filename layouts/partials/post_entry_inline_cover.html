@@ -1,4 +1,5 @@
 {{- $class := .class | default "post-entry" -}}
+{{- $size := .size | default 130 -}}
 {{- with .page -}}
 {{- $coverImage := .Params.cover.image -}}
 {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false -}}
@@ -8,7 +9,7 @@
   {{- if $hasCover }}
     {{/* --- AVEC COVER : Image à gauche --- */}}
     <div class="entry-thumb">
-      {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
+      {{- partial "inline_cover.html" (dict "page" . "size" $size) }}
     </div>
 
     <div class="entry-wrapper">

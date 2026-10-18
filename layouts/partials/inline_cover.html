@@ -1,0 +1,25 @@
+{{- $size := .size | default 130 -}}
+{{- with .page -}}
+{{- $page := . -}}
+{{- with $page.Params.cover.image -}}
+<figure class="entry-cover">
+    {{- $alt := ($page.Params.cover.alt | default $page.Params.cover.caption | default "Image d'illustration" | plainify) -}}
+    {{- $raw := . -}}
+    {{- $u := urls.Parse $raw -}}
+    {{- $res := 0 -}}
+    {{- if not $u.IsAbs -}}
+        {{- $res = or
+            ($page.Resources.Get (path.Base $raw))
+            (resources.Get (strings.TrimPrefix "/" $raw))
+            (resources.Get $raw)
+        -}}
+    {{- end -}}
+    {{- if and $res (eq $res.MediaType.MainType "image") -}}
+        {{- $thumb := $res.Fill (printf "%dx%d Center" (int $size) (int $size)) -}}
+        <img loading="lazy" src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ $alt }}">
+    {{- else -}}
+        <img loading="lazy" src="{{ $raw | absURL }}" width="{{ $size }}" height="{{ $size }}" alt="{{ $alt }}">
+    {{- end -}}
+</figure>
+{{- end -}}
+{{- end -}}
