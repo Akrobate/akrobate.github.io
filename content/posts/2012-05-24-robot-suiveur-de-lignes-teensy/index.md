@@ -15,9 +15,11 @@ tags:
   - telecommande lego
 categories:
   - Robotique
+showTOC: true
 cover:
   image: "/posts/robot-suiveur-de-lignes-teensy/robot-suiveur-de-lignes-main.avif"
   alt: "Image d'illustration"
+description: Découvrez comment fabriquer un robot suiveur de lignes autonome piloté par un microcontrôleur Teensy (Arduino), avec un châssis Lego Technic et des moteurs contrôlés par infrarouge. Tutoriel complet avec code source, schémas électroniques et explications.
 ---
 
 ![](robot-suiveur-de-lignes-main.avif)
@@ -113,10 +115,11 @@ void loop() {
 ## L'electronique : schemas
   
 Le schémas électronique du robot est on ne peut plus simple. Le montage utilise un teensy2++ équivalent de l'arduino. Le schémas électronique proposé ci dessous utilise le brochage déclaré dans le programme du robot. Sur le schémas vous pouvez voir la partie alimentation a base d'un 7805 standart. En effet l'alimentation de la carte est assuré par une batterie de 9v. On n'utilise pas ici l'alimentation des moteurs. Notre carte a sa propre partie alimentation.  
-  
+
+
 
 ![](RobotLineFollower.avif)
-
+{ mode="lightbox" }
   
   
 ## Planning de gant du projet Robot suiveur de lignes
@@ -125,35 +128,16 @@ Enfin pour finir, un petit bonnus: J'utilise souvent pour encadrer mes projets l
   
 
 ![](gant-diagram-robot.avif)
-  
-  
-## Vidéo du robot en fonctionnement
-  
-  
-  
+{ mode="lightbox" }
 
-  
-  
-  
+
+## Vidéo du robot en fonctionnement
+
+{{< youtube-lite "IvgFzfjKfoU" >}}
+
+
 ## Documents annexes
   
 - [Code source complet du projet robot suiveur de lignes arduino](http://artiom21.free.fr/projets/arduino-robot-line-follower/RobotLineFollow.zip)  
 - [Documentation sur l'interface arduino - lego (LegoRC arduino class)](http://artiom-fedorov.blogspot.fr/2012/05/telecommande-infrarouge-lego-power.html)  
 - [Documentation sur les capteurs de lignes et classe arduino](http://artiom-fedorov.blogspot.fr/2012/05/capteur-de-lignes-pour-la-robotique-et.html)
-
-
-
-robot-suiveur-de-lignes-main.JPG
-P1010040.JPG
-P1010052.JPG
-P1010053.JPG
-P1010055.JPG
-P1010054.JPG
-P1010042.JPG
-P1010041.JPG
-P1010039.JPG
-P1010038.JPG
-P1010037.JPG
-RobotLineFollower.png
-gant+robot.png
-

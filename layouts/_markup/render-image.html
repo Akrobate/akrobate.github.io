@@ -15,7 +15,7 @@
   {{- if $miniatureWidth -}}
     {{- $thumb = .Resize (printf "%dx q60" (int $miniatureWidth)) -}}
   {{- end -}}
-<figure class="glightbox-figure {{ $class }}" style="text-align: center; margin: 1.5rem 0;">
+<figure class="glightbox-figure {{ $class }}" style="text-align: center; margin: 1.0rem 0;">
   <a href="{{ .RelPermalink }}" 
     class="glightbox" 
     data-gallery="{{ $group }}" 
