@@ -2,7 +2,7 @@
 date: '2012-12-25T14:05:20+02:00'
 draft: false
 title: "Robot suiveur de balles OpenCV (Projet expérimental)"
-slug: "robot-suiveur-de-balles"
+slug: "robot-suiveur-de-balles-opencv"
 tags:
   - arduino
   - Artiom FEDOROV
@@ -23,26 +23,34 @@ cover:
   alt: "Image d'illustration"
 ---
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXzGVroSXz94N3xPVKDv1QGiMSwramHe91DlRMjHTFrD4LYzRvI83N3AgeVdbOgcj4a_Z9mN1GtChAYBM1otZ2yeHc_qcdGW72kkG25mOhbY0MwTes_ThAM3tQ8JMryMcIkut3UA0-Et4/s200/P1010494.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXzGVroSXz94N3xPVKDv1QGiMSwramHe91DlRMjHTFrD4LYzRvI83N3AgeVdbOgcj4a_Z9mN1GtChAYBM1otZ2yeHc_qcdGW72kkG25mOhbY0MwTes_ThAM3tQ8JMryMcIkut3UA0-Et4/s1600/P1010494.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgu56h8jiiC7kxQUyDIdqiJoJp9s-lw1vk3cECOkydorksJw9LAkCqJGN5XqonjbzariwwesuTMUi8gNIYn7vtyds2W02a6UMaf2g6iCN7umbazdqC4T86eAKHmKnretIqMTyQJmw66U0/s200/P1010487.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgu56h8jiiC7kxQUyDIdqiJoJp9s-lw1vk3cECOkydorksJw9LAkCqJGN5XqonjbzariwwesuTMUi8gNIYn7vtyds2W02a6UMaf2g6iCN7umbazdqC4T86eAKHmKnretIqMTyQJmw66U0/s1600/P1010487.JPG)Le projet robot tourelle suiveuse de balles, est sans doutes le premier d'une longue série de petits projets à venir. En effet les possibilités offertes par la librairie **OpenCV** sont impressionnantes et "simples" à mettre en place. L'idée de ce premier projet à base d'**OpenCV** est de réussir à déplacer une webcam montée sur un châssis rotatif afin que celle ci fixe une balle et la centre au milieu de l'image. Le châssis est entièrement réalisé en légos et la caméra est une petite webcam générique maintenue en place sur une pièce légo par des visses. La motorisation est un kit power functions contenant deux petits moteurs, le bloc batterie et le récepteur infrarouge légo. La webcam est branchée directement à un PC. La tourelle quand à elle est branchée aussi à l'USB grâce à une interface "maison" USB vers signaux infrarouges légo. Côté commande de la tourelle il suffit d'envoyer des chaines de caractères (correspondant à la rotation moteur voulue) dans le bon périphérique usb.  
-  
+![](P1010494.avif)
+{ .article-image-left mode="lightbox" miniature-width=200 }
 
-**Partie électronique du projet**  
-  
+![](P1010487.avif)
+{ .article-image-right mode="lightbox" miniature-width=200 }
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQU9mc9Q1aO-TRLOYNW9MxF5VSeImVCk21jAYkUyCkKCX809fXBUl-Dlit7W6KOcGfvIpw2Ac76UGD0kunWKYu_AO26LwmVhzqL9FGo3dYKu9IYjlm887MNxq-LxCBnT-1CxCX4VM1UXc/s200/recepteur+infrarouge+artiom+fedorov.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQU9mc9Q1aO-TRLOYNW9MxF5VSeImVCk21jAYkUyCkKCX809fXBUl-Dlit7W6KOcGfvIpw2Ac76UGD0kunWKYu_AO26LwmVhzqL9FGo3dYKu9IYjlm887MNxq-LxCBnT-1CxCX4VM1UXc/s1600/recepteur+infrarouge+artiom+fedorov.JPG)
+Le projet robot tourelle suiveuse de balles, est sans doutes le premier d'une longue série de petits projets à venir. En effet les possibilités offertes par la librairie **OpenCV** sont impressionnantes et "simples" à mettre en place. L'idée de ce premier projet à base d'**OpenCV** est de réussir à déplacer une webcam montée sur un châssis rotatif afin que celle ci fixe une balle et la centre au milieu de l'image. Le châssis est entièrement réalisé en légos et la caméra est une petite webcam générique maintenue en place sur une pièce légo par des visses. La motorisation est un kit power functions contenant deux petits moteurs, le bloc batterie et le récepteur infrarouge légo. La webcam est branchée directement à un PC. La tourelle quand à elle est branchée aussi à l'USB grâce à une interface "maison" USB vers signaux infrarouges légo. Côté commande de la tourelle il suffit d'envoyer des chaines de caractères (correspondant à la rotation moteur voulue) dans le bon périphérique usb.  
 
-[![Schemas électronique de l'intérface USB vers Signaux infrarouges légo](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhm5QYoc4il_JOgmrAARchixV3VGqRjbliCOtKLRmh8TiY_a3p6sBpuYaiaxjc4wElGjZjmcjRvHe4S5xYqyDgsiiaK2npg4OnbNccVkqX9rZuoYToeKaiIbaz9kUsP1BzQwlBGxSdCCTY/s200/USBversLegoCommand.png "Schemas electronique interface lego IR usb")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhm5QYoc4il_JOgmrAARchixV3VGqRjbliCOtKLRmh8TiY_a3p6sBpuYaiaxjc4wElGjZjmcjRvHe4S5xYqyDgsiiaK2npg4OnbNccVkqX9rZuoYToeKaiIbaz9kUsP1BzQwlBGxSdCCTY/s1600/USBversLegoCommand.png)La partie électronique du projet se résume en quelques composants très basiques ainsi que des concepts précédemment évoqués sur mon blog. En effet la partie électronique nécessaire est l'interface entre l'USB et la commande infrarouge légo. Donc au final c'est un mélange entre le projet [Télécommande infrarouge lego power function et librairie arduino](http://artiom-fedorov.blogspot.fr/2012/05/telecommande-infrarouge-lego-power.html) (pour toute la partie génération des signaux infrarouges et commande des moteurs) et [Mini écran LCD pour serveur (linux) en USB](http://artiom-fedorov.blogspot.fr/2012/09/futur-articlemini-ecran-lcd-pour.html) (pour tout ce qui concerne la lecture des chaines de caractères sur le port USB. Le coeur de la partie électronique est un teensy2++ (équivalent de l'arduino). Ce circuit en lui même est on ne peut plus simple. J'ai choisi de conserver le **montage du mini écran LCD en USB** pour ce projet car cela permet d'avoir un debug supplémentaire sous la main.
 
-  
+## Partie électronique du projet
+
+![](recepteur-infrarouge-artiom-fedorov.avif)
+{ .article-image-left mode="lightbox" miniature-width=200 }
+
+![Schemas electronique interface lego IR usb](USBversLegoCommand.avif)
+{ .article-image-right mode="lightbox" miniature-width=200 }
+
+La partie électronique du projet se résume en quelques composants très basiques ainsi que des concepts précédemment évoqués sur mon blog. En effet la partie électronique nécessaire est l'interface entre l'USB et la commande infrarouge légo. Donc au final c'est un mélange entre le projet [Télécommande infrarouge lego power function et librairie arduino](http://artiom-fedorov.blogspot.fr/2012/05/telecommande-infrarouge-lego-power.html) (pour toute la partie génération des signaux infrarouges et commande des moteurs) et [Mini écran LCD pour serveur (linux) en USB](http://artiom-fedorov.blogspot.fr/2012/09/futur-articlemini-ecran-lcd-pour.html) (pour tout ce qui concerne la lecture des chaines de caractères sur le port USB. Le coeur de la partie électronique est un teensy2++ (équivalent de l'arduino). Ce circuit en lui même est on ne peut plus simple. J'ai choisi de conserver le **montage du mini écran LCD en USB** pour ce projet car cela permet d'avoir un debug supplémentaire sous la main.
 
 Le schéma électronique ne change quasiment pas du schéma du mini écran LCD pour usb. En effet la seule évolution c'est le **rajout de la diode infrarouge** et de sa résistance pour l'envoi des commandes infrarouges vers le récepteur de Lego.
 
   
-**Le programme informatique de l'adaptateur USB vers commande infrarouge lego**  
+## Le programme informatique de l'adaptateur USB vers commande infrarouge lego
   
 Le programme est très simple. La boucle principale s'occupe de **lire les messages séries** arrivant **par le port USB** puis de les **retranscrire en signaux légo** grâce a la classe Lego détaillée dans l'[article télécommande infrarouge lego power function](http://artiom-fedorov.blogspot.fr/2012/05/telecommande-infrarouge-lego-power.html). Les messages USB sont eux générés par un autre programme tournant cette fois ci sur le PC. Dans le programme du teensy (équivalent arduino) vous pouvez voir une méthode permettant d'utiliser l'écran LCD pour **afficher** ce qui se passe en ce qui concerne **la réception des messages en USB**. Cette phase est évidement chronophage,  de ce fait si on cherche a optimiser la fluidité de transmission de notre interface il s'agira de commenter tout ce qui commence par lcd dans la fonction sendRc.  
   
 
+```cpp
 #include <liquidcrystal.h>
 #include "LegoRC.h"
 
@@ -102,15 +110,22 @@ void sendRc(int i) {
  legoRC.sendCommand(4, m1, m2);
 
 }
+```
+  
+## Le programme informatique côté PC
 
-  
-**Le programme informatique côté PC**  
-  
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvVn8bP4Fv48quVcrpUFejuIVxwNTJBF86gHoiMU310G2UdszJL37_6-x2TXQyouYYfVpC4bxOacvKAeXFudW9WIGLwlS77fnAPp1FEpJciz7c35D9x8dWXl2pIKrLBceyHr_ShYiku8Q/s200/P1010492.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvVn8bP4Fv48quVcrpUFejuIVxwNTJBF86gHoiMU310G2UdszJL37_6-x2TXQyouYYfVpC4bxOacvKAeXFudW9WIGLwlS77fnAPp1FEpJciz7c35D9x8dWXl2pIKrLBceyHr_ShYiku8Q/s1600/P1010492.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtX6B84y11tnvb8KIBb4cUOR3cBaT2nnlwo6J4qFcC-AlFlt2nN7sS3HLcG-Eoublvi87BYIgueTlCRZP0G9RhMfaR-XWh6j3ambRmQ5UMXgqjVtw0UjvZMfaRyOlf28z0F4WHuMupeb4/s200/detection+cercles+open+cv+artiom.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtX6B84y11tnvb8KIBb4cUOR3cBaT2nnlwo6J4qFcC-AlFlt2nN7sS3HLcG-Eoublvi87BYIgueTlCRZP0G9RhMfaR-XWh6j3ambRmQ5UMXgqjVtw0UjvZMfaRyOlf28z0F4WHuMupeb4/s1600/detection+cercles+open+cv+artiom.png)Côté PC un programme en C permet la détection de ronds a la webcam et indique la correction nécessaire pour amener le rond détecté au centre de l'image de la webcam. La détection de cercles dans l'image se fait grâce a la librairie OpenCV.  
-  
-La libraire openCV propose la fonction _HoughCircles_ permettant de détecter tous les cercles reconnus à l'image. Pour chaque cercle les coordonnées x et y ainsi que le rayon du cercle détecté sont renvoyés par la fonction. Dans mon code je pars du principe qu'un seul cercle est présent a l'image, si tel n'est pas le cas, alors je prends le cercle qui a été détecté en dernier dans l'image courante. Une fois que nous disposons des coordonnées (x,y) du cercle détecté, nous pouvons donc e**stimer la direction de la rotation** de la tourelle afin que **x et y soient le plus proche possible du centre de l'image**. Dans le code j'ai implémenté une variable servant d'erreur acceptée afin qu'un déplacement minime du cercle dans la vision de la webcam ne déclenche pas une rotation de la tourelle. Ce procédé me permet d'éviter la réaction de la tourelle au bruit induit par la **détection des cercles par OpenCV**.  
-  
+![](P1010492.avif)
+{ .article-image-left mode="lightbox" miniature-width=200 }
 
+![](detection-cercles-opencv-artiom.avif)
+{ .article-image-right mode="lightbox" miniature-width=200 }
+
+
+Côté PC un programme en C permet la détection de ronds a la webcam et indique la correction nécessaire pour amener le rond détecté au centre de l'image de la webcam. La détection de cercles dans l'image se fait grâce a la librairie OpenCV.  
+
+La libraire openCV propose la fonction _HoughCircles_ permettant de détecter tous les cercles reconnus à l'image. Pour chaque cercle les coordonnées x et y ainsi que le rayon du cercle détecté sont renvoyés par la fonction. Dans mon code je pars du principe qu'un seul cercle est présent a l'image, si tel n'est pas le cas, alors je prends le cercle qui a été détecté en dernier dans l'image courante. Une fois que nous disposons des coordonnées (x,y) du cercle détecté, nous pouvons donc **estimer la direction de la rotation** de la tourelle afin que **x et y soient le plus proche possible du centre de l'image**. Dans le code j'ai implémenté une variable servant d'erreur acceptée afin qu'un déplacement minime du cercle dans la vision de la webcam ne déclenche pas une rotation de la tourelle. Ce procédé me permet d'éviter la réaction de la tourelle au bruit induit par la **détection des cercles par OpenCV**.  
+
+```cpp
 #include "stdio.h"
 #include "opencv/cv.h"
 #include <math.h>
@@ -211,7 +226,7 @@ void yb() {
 void xys() {
     system("echo \"808\" > /dev/ttyACM0");
 }
-
+```
   
   
 **Partie mécanique en légos technics et Lego Power functions**  
