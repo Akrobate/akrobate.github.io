@@ -19,8 +19,10 @@ tags:
 categories:
   - Électronique
 cover:
-  image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXzGVroSXz94N3xPVKDv1QGiMSwramHe91DlRMjHTFrD4LYzRvI83N3AgeVdbOgcj4a_Z9mN1GtChAYBM1otZ2yeHc_qcdGW72kkG25mOhbY0MwTes_ThAM3tQ8JMryMcIkut3UA0-Et4/s1600/P1010494.JPG"
+  image: "P1010494.avif"
   alt: "Image d'illustration"
+description:
+showTOC: true
 ---
 
 ![](P1010494.avif)
@@ -29,7 +31,7 @@ cover:
 ![](P1010487.avif)
 { .article-image-right mode="lightbox" miniature-width=200 }
 
-Le projet robot tourelle suiveuse de balles, est sans doutes le premier d'une longue série de petits projets à venir. En effet les possibilités offertes par la librairie **OpenCV** sont impressionnantes et "simples" à mettre en place. L'idée de ce premier projet à base d'**OpenCV** est de réussir à déplacer une webcam montée sur un châssis rotatif afin que celle ci fixe une balle et la centre au milieu de l'image. Le châssis est entièrement réalisé en légos et la caméra est une petite webcam générique maintenue en place sur une pièce légo par des visses. La motorisation est un kit power functions contenant deux petits moteurs, le bloc batterie et le récepteur infrarouge légo. La webcam est branchée directement à un PC. La tourelle quand à elle est branchée aussi à l'USB grâce à une interface "maison" USB vers signaux infrarouges légo. Côté commande de la tourelle il suffit d'envoyer des chaines de caractères (correspondant à la rotation moteur voulue) dans le bon périphérique usb.  
+Le projet robot tourelle suiveuse de balles, est sans doutes le premier d'une longue série de petits projets à venir. En effet les possibilités offertes par la librairie **OpenCV** sont impressionnantes et "simples" à mettre en place. L'idée de ce premier projet à base d'**OpenCV** est de réussir à déplacer une webcam montée sur un châssis rotatif afin que celle ci fixe une balle et la centre au milieu de l'image. Le châssis est entièrement réalisé en légos et la caméra est une petite webcam générique maintenue en place sur une pièce légo par des visses. La motorisation est un kit power functions contenant deux petits moteurs, le bloc batterie et le récepteur infrarouge légo. La webcam est branchée directement à un PC. La tourelle quand à elle est branchée aussi à l'USB grâce à une interface "maison" USB vers signaux infrarouges légo. Côté commande de la tourelle il suffit d'envoyer des chaines de caractères (correspondant à la rotation moteur voulue) dans le bon périphérique usb.
 
 
 ## Partie électronique du projet
@@ -62,33 +64,33 @@ int newMSG = 0;
 int led = 12;
 
 void setup() {
-  pinMode(led, OUTPUT);
-  lcd.begin(16, 2);
-  Serial.begin(9600);
+    pinMode(led, OUTPUT);
+    lcd.begin(16, 2);
+    Serial.begin(9600);
 }
 
 
 void loop() {
   // Lecture d'une chaine de carracteres
-  while (Serial.available()) {
-    digitalWrite(led, HIGH);
-    incomingByte = Serial.read();  // will not be -1
-    tmpl = tmpl + char(incomingByte);
-    newMSG = 1;
-  }
+    while (Serial.available()) {
+        digitalWrite(led, HIGH);
+        incomingByte = Serial.read();  // will not be -1
+        tmpl = tmpl + char(incomingByte);
+        newMSG = 1;
+    }
 
    digitalWrite(led, LOW);
 
     if (newMSG) {
-      l1 = l2;
-      l2 = tmpl.trim();
-      String  myString = l2;
-      int myStringLength = myString.length()+1;
-      char myChar[myStringLength];
-      myString.toCharArray(myChar,myStringLength);
-      int result = atoi(myChar);
-      sendRc(result);
-      tmpl = "";      
+        l1 = l2;
+        l2 = tmpl.trim();
+        String  myString = l2;
+        int myStringLength = myString.length()+1;
+        char myChar[myStringLength];
+        myString.toCharArray(myChar,myStringLength);
+        int result = atoi(myChar);
+        sendRc(result);
+        tmpl = "";
     }
 
     newMSG = 0;
@@ -97,17 +99,17 @@ void loop() {
 
 void sendRc(int i) {
  
- int m1 = i / 100;
- int m2 = i % 100;
- 
- lcd.clear();
- lcd.setCursor(0, 0);
- lcd.print(m1);   
+    int m1 = i / 100;
+    int m2 = i % 100;
+    
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print(m1);   
 
- lcd.setCursor(0, 1);
- lcd.print(m2);   
-  
- legoRC.sendCommand(4, m1, m2);
+    lcd.setCursor(0, 1);
+    lcd.print(m2);   
+    
+    legoRC.sendCommand(4, m1, m2);
 
 }
 ```
@@ -152,8 +154,7 @@ int main() {
     int circley = 0;
     int bbox = 0;
 
-    for(;;)
-    {
+    for(;;) {
         Mat frame;
         cap >> frame; // get a new frame from camera
         cvtColor(frame, edges, CV_BGR2GRAY);
@@ -162,20 +163,19 @@ int main() {
         vector<vec3f> circles;
         HoughCircles(edges, circles, CV_HOUGH_GRADIENT, 2, edges.rows/4, 200, 100 );
 
-
        if (circles.size() > 0) {
        
-           for (int i = 0; i < circles.size(); i++) {
-            circlex = cvRound(circles[i][0]);
-            circley = cvRound(circles[i][1]);
-            Point center(cvRound(circles[i][0]), cvRound(circles[i][1]));
-            int radius = cvRound(circles[i][2]);
-            circle(frame, center, 3, Scalar(0,255,0), -1, 8, 0 );
-            circle( frame, center, radius, Scalar(0,0,255), 3, 8, 0 );
-            printf("x %d ; y %d \n", cvRound(circles[i][0]), cvRound(circles[i][1]) );
-
-           }
+            for (int i = 0; i < circles.size(); i++) {
+                circlex = cvRound(circles[i][0]);
+                circley = cvRound(circles[i][1]);
+                Point center(cvRound(circles[i][0]), cvRound(circles[i][1]));
+                int radius = cvRound(circles[i][2]);
+                circle(frame, center, 3, Scalar(0,255,0), -1, 8, 0 );
+                circle( frame, center, radius, Scalar(0,0,255), 3, 8, 0 );
+                printf("x %d ; y %d \n", cvRound(circles[i][0]), cvRound(circles[i][1]) );
+            }
             bbox = 20;
+
             if (circlex > (320 + bbox)) {
                 xr();
                 xys();
@@ -188,12 +188,10 @@ int main() {
             if (circley > (240 + bbox)) {
                 yb();
                 xys();
-
             } else if ((circley < (240-bbox)) && (circley != 0)) {
                 yt();
                 xys();
             }
-            
         } else {
             circlex = 0;
             circley = 0;
@@ -203,7 +201,6 @@ int main() {
         
         if(waitKey(30) >= 0) break;
     }
- 
     return 0;
 }
 
@@ -229,19 +226,74 @@ void xys() {
 ```
   
   
-**Partie mécanique en légos technics et Lego Power functions**  
+## Partie mécanique en légos technics et Lego Power functions
   
 La mécanique de ce robot suiveur de balles est entièrement faite en légos technics. Seule la caméra usb est fixé sur une pièce légo standard avec des vices. Le principe est simple. La caméra peut tourner a droite ou a gauche en actionnant un des deux petits moteurs des power functions. L'autre moteur sert a la commande monter et descendre la caméra. Les deux moteurs sonts reliés a un récepteur infrarouge (première version) Légo. Le récepteur en lui même est évidement connecté a un bloc d'alimentation légo. Le récepteur infrarouge dervé évidement être mis en face de la diode infrarouge qui émet les signaux transmis par le programme PC via le port USB. La webcam utilisée dans ce projet est une simple caméra usb générique acheté une quinzaine d'euros dans une boutique d'informatique. J'ai privilégié ce modèle pour la facilité de fixation.  
-  
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYDZYfWJRKt7DYSI3aYI2cU_pZDRB5bcKloUVuNb3IgrKOBeQGBF9leJL3kwAP4dJUgK6SHxM54rO9DY7KiK3viFEzzJEq42JK6cAEqPxLO1DAK_27o-lcc60VuS9BsjmGErrVQ2zeMrM/s200/P1010493.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYDZYfWJRKt7DYSI3aYI2cU_pZDRB5bcKloUVuNb3IgrKOBeQGBF9leJL3kwAP4dJUgK6SHxM54rO9DY7KiK3viFEzzJEq42JK6cAEqPxLO1DAK_27o-lcc60VuS9BsjmGErrVQ2zeMrM/s1600/P1010493.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXzGVroSXz94N3xPVKDv1QGiMSwramHe91DlRMjHTFrD4LYzRvI83N3AgeVdbOgcj4a_Z9mN1GtChAYBM1otZ2yeHc_qcdGW72kkG25mOhbY0MwTes_ThAM3tQ8JMryMcIkut3UA0-Et4/s200/P1010494.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXzGVroSXz94N3xPVKDv1QGiMSwramHe91DlRMjHTFrD4LYzRvI83N3AgeVdbOgcj4a_Z9mN1GtChAYBM1otZ2yeHc_qcdGW72kkG25mOhbY0MwTes_ThAM3tQ8JMryMcIkut3UA0-Et4/s1600/P1010494.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHymtCLJA8DRIRJ5ioKa-BzVZTm14yDYRbPZD1R3AbYz1KR0gyQ52uZ-jjat8sozDda09arjWVvjiA0_dV2wqzej0upuGam7-wm9nrh3FrtSx1KxSBBburLDHYQD8bEbKO1JaTVDMcijQ/s200/P1010489.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHymtCLJA8DRIRJ5ioKa-BzVZTm14yDYRbPZD1R3AbYz1KR0gyQ52uZ-jjat8sozDda09arjWVvjiA0_dV2wqzej0upuGam7-wm9nrh3FrtSx1KxSBBburLDHYQD8bEbKO1JaTVDMcijQ/s1600/P1010489.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3oYwnmihLOT9C8YlCFlzbzWE66jqXRxonA76r5BqWqtiJjPamG21hvKb-GteCt7Yr1ettMdlbsyUAqUdMaRBcv_EG-v8HlFQuRVC5RkFtykE8R9A04Goo4c6P2XOk1HYNRrRIxiYjHT0/s200/P1010495.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3oYwnmihLOT9C8YlCFlzbzWE66jqXRxonA76r5BqWqtiJjPamG21hvKb-GteCt7Yr1ettMdlbsyUAqUdMaRBcv_EG-v8HlFQuRVC5RkFtykE8R9A04Goo4c6P2XOk1HYNRrRIxiYjHT0/s1600/P1010495.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhA2W-a2oMGheY1PDhyphenhyphenbHASnrfQ0IiscjDn8zJTZ1vjRtDRzq0aPIWxsKzLTG16NCxJick1dNP-lrv7G3Q9S3dav4oASUK2DVZkRNoVyEtNPbDZnW-rhRgPyUnZ42O6S0hOK70eQq2kOvc/s200/P1010488.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhA2W-a2oMGheY1PDhyphenhyphenbHASnrfQ0IiscjDn8zJTZ1vjRtDRzq0aPIWxsKzLTG16NCxJick1dNP-lrv7G3Q9S3dav4oASUK2DVZkRNoVyEtNPbDZnW-rhRgPyUnZ42O6S0hOK70eQq2kOvc/s1600/P1010488.JPG)  
 
+
+{{% gallery %}}
+
+![](P1010493.avif)
+{ mode="lightbox" miniature-width=200 }
+
+![](P1010494.avif)
+{ mode="lightbox" miniature-width=200 }
+
+![](P1010489.avif)
+{ mode="lightbox" miniature-width=200 }
+
+![](P1010495.avif)
+{ mode="lightbox" miniature-width=200 }
+
+![](P1010488.avif)
+{ mode="lightbox" miniature-width=200 }
+
+{{% /gallery %}}
+
+
+## Fichiers du projet robot suiveur de balles a télécharger
   
-  
-**Fichiers du projet robot suiveur de balles a télécharger**  
-  
-[Code source complet arduino de l'adaptateur USB vers commande légo infrarouge](http://artiom21.free.fr/projets/robot-tourelle-lego/UsbLegoControl.zip)  
-[Code source complet C programme de détection opencv et envoi USB (code::blocks)](http://artiom21.free.fr/projets/robot-tourelle-lego/OpenCV.zip)  
-  
-**Toutes les photos du projet robot suiveur de balles**  
-  
-[![photos représantant le robot suiveur de balles](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgu56h8jiiC7kxQUyDIdqiJoJp9s-lw1vk3cECOkydorksJw9LAkCqJGN5XqonjbzariwwesuTMUi8gNIYn7vtyds2W02a6UMaf2g6iCN7umbazdqC4T86eAKHmKnretIqMTyQJmw66U0/s200/P1010487.JPG "Robot suiveur de balles")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgu56h8jiiC7kxQUyDIdqiJoJp9s-lw1vk3cECOkydorksJw9LAkCqJGN5XqonjbzariwwesuTMUi8gNIYn7vtyds2W02a6UMaf2g6iCN7umbazdqC4T86eAKHmKnretIqMTyQJmw66U0/s1600/P1010487.JPG)[![robot tourelle suiveur de balles](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhA2W-a2oMGheY1PDhyphenhyphenbHASnrfQ0IiscjDn8zJTZ1vjRtDRzq0aPIWxsKzLTG16NCxJick1dNP-lrv7G3Q9S3dav4oASUK2DVZkRNoVyEtNPbDZnW-rhRgPyUnZ42O6S0hOK70eQq2kOvc/s200/P1010488.JPG "robot suiveur de balles")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhA2W-a2oMGheY1PDhyphenhyphenbHASnrfQ0IiscjDn8zJTZ1vjRtDRzq0aPIWxsKzLTG16NCxJick1dNP-lrv7G3Q9S3dav4oASUK2DVZkRNoVyEtNPbDZnW-rhRgPyUnZ42O6S0hOK70eQq2kOvc/s1600/P1010488.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHymtCLJA8DRIRJ5ioKa-BzVZTm14yDYRbPZD1R3AbYz1KR0gyQ52uZ-jjat8sozDda09arjWVvjiA0_dV2wqzej0upuGam7-wm9nrh3FrtSx1KxSBBburLDHYQD8bEbKO1JaTVDMcijQ/s200/P1010489.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHymtCLJA8DRIRJ5ioKa-BzVZTm14yDYRbPZD1R3AbYz1KR0gyQ52uZ-jjat8sozDda09arjWVvjiA0_dV2wqzej0upuGam7-wm9nrh3FrtSx1KxSBBburLDHYQD8bEbKO1JaTVDMcijQ/s1600/P1010489.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQXPh36gZ0mH3xWozQNkyIOlTaNIWOONlN8r_f2-SoeR94H6qlPcrqBkhyMGMGQdXLGMdIzh1puziMHgD8RgV6USPCltUUNsNzzXmMDiy_gB9LhUfSjsROgkA7j2hcnEVckmnzac6u19Y/s200/P1010490.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQXPh36gZ0mH3xWozQNkyIOlTaNIWOONlN8r_f2-SoeR94H6qlPcrqBkhyMGMGQdXLGMdIzh1puziMHgD8RgV6USPCltUUNsNzzXmMDiy_gB9LhUfSjsROgkA7j2hcnEVckmnzac6u19Y/s1600/P1010490.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXzGVroSXz94N3xPVKDv1QGiMSwramHe91DlRMjHTFrD4LYzRvI83N3AgeVdbOgcj4a_Z9mN1GtChAYBM1otZ2yeHc_qcdGW72kkG25mOhbY0MwTes_ThAM3tQ8JMryMcIkut3UA0-Et4/s200/P1010494.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXzGVroSXz94N3xPVKDv1QGiMSwramHe91DlRMjHTFrD4LYzRvI83N3AgeVdbOgcj4a_Z9mN1GtChAYBM1otZ2yeHc_qcdGW72kkG25mOhbY0MwTes_ThAM3tQ8JMryMcIkut3UA0-Et4/s1600/P1010494.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYDZYfWJRKt7DYSI3aYI2cU_pZDRB5bcKloUVuNb3IgrKOBeQGBF9leJL3kwAP4dJUgK6SHxM54rO9DY7KiK3viFEzzJEq42JK6cAEqPxLO1DAK_27o-lcc60VuS9BsjmGErrVQ2zeMrM/s200/P1010493.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYDZYfWJRKt7DYSI3aYI2cU_pZDRB5bcKloUVuNb3IgrKOBeQGBF9leJL3kwAP4dJUgK6SHxM54rO9DY7KiK3viFEzzJEq42JK6cAEqPxLO1DAK_27o-lcc60VuS9BsjmGErrVQ2zeMrM/s1600/P1010493.JPG)[![detection de cercles par artiom fedorov](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvVn8bP4Fv48quVcrpUFejuIVxwNTJBF86gHoiMU310G2UdszJL37_6-x2TXQyouYYfVpC4bxOacvKAeXFudW9WIGLwlS77fnAPp1FEpJciz7c35D9x8dWXl2pIKrLBceyHr_ShYiku8Q/s200/P1010492.JPG "detection de forme opencv arduino")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvVn8bP4Fv48quVcrpUFejuIVxwNTJBF86gHoiMU310G2UdszJL37_6-x2TXQyouYYfVpC4bxOacvKAeXFudW9WIGLwlS77fnAPp1FEpJciz7c35D9x8dWXl2pIKrLBceyHr_ShYiku8Q/s1600/P1010492.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWn0JCyxCeOHRXUHWdhkj5kb2Bqr4FyBpukady0_dbdzZ_3j-vxx8gQ1MqJqy8Gd1Zw5mrPVM9rSsDy3uGrTss7sYFhaWusyJUHgLD5F1IFGYkATlGMd6aQWMxOx8cZbnElC1lNDS_dN8/s200/P1010491.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWn0JCyxCeOHRXUHWdhkj5kb2Bqr4FyBpukady0_dbdzZ_3j-vxx8gQ1MqJqy8Gd1Zw5mrPVM9rSsDy3uGrTss7sYFhaWusyJUHgLD5F1IFGYkATlGMd6aQWMxOx8cZbnElC1lNDS_dN8/s1600/P1010491.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3oYwnmihLOT9C8YlCFlzbzWE66jqXRxonA76r5BqWqtiJjPamG21hvKb-GteCt7Yr1ettMdlbsyUAqUdMaRBcv_EG-v8HlFQuRVC5RkFtykE8R9A04Goo4c6P2XOk1HYNRrRIxiYjHT0/s200/P1010495.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3oYwnmihLOT9C8YlCFlzbzWE66jqXRxonA76r5BqWqtiJjPamG21hvKb-GteCt7Yr1ettMdlbsyUAqUdMaRBcv_EG-v8HlFQuRVC5RkFtykE8R9A04Goo4c6P2XOk1HYNRrRIxiYjHT0/s1600/P1010495.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZu-mMf6hprVS4EwGlXB0Vlerv7hTmyGMqP7btp2eOWihzP0jahXrL6KPFpw0gSUKknhYFR1SUUK1tQeoNljK8TLBqOniAl_z2AL_-dPTMrRiE0m1NYwupzhxb5LB4nnda6r92CH3noIU/s200/P1010496.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZu-mMf6hprVS4EwGlXB0Vlerv7hTmyGMqP7btp2eOWihzP0jahXrL6KPFpw0gSUKknhYFR1SUUK1tQeoNljK8TLBqOniAl_z2AL_-dPTMrRiE0m1NYwupzhxb5LB4nnda6r92CH3noIU/s1600/P1010496.JPG)[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiS062j3z1gIM3oqNXjkndflbibnciv7uYcQYifzXqVj7CUIYpczQWDdGA5doN79fSP1_u4kDZWI4OnzrD9VYvt_3mMIjEeqBft1S451f9JoGcLbEN50avlM6Qg2QL3T8LFH5B-D1oUkNU/s200/P1010497.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiS062j3z1gIM3oqNXjkndflbibnciv7uYcQYifzXqVj7CUIYpczQWDdGA5doN79fSP1_u4kDZWI4OnzrD9VYvt_3mMIjEeqBft1S451f9JoGcLbEN50avlM6Qg2QL3T8LFH5B-D1oUkNU/s1600/P1010497.JPG)
+- [Code source complet arduino de l'adaptateur USB vers commande légo infrarouge](http://artiom21.free.fr/projets/robot-tourelle-lego/UsbLegoControl.zip)  
+- [Code source complet C programme de détection opencv et envoi USB (code::blocks)](http://artiom21.free.fr/projets/robot-tourelle-lego/OpenCV.zip)  
+
+
+## Toutes les photos du projet robot suiveur de balles
+
+{{% gallery %}}
+
+![photos représantant le robot suiveur de balles](P1010487.avif)
+{ mode="lightbox" miniature-width=200 }
+
+![robot tourelle suiveur de balles](P1010488.avif)
+{ mode="lightbox" miniature-width=200 }
+
+![](P1010489.avif)
+{ mode="lightbox" miniature-width=200 }
+
+![](P1010490.avif)
+{ mode="lightbox" miniature-width=200 }
+
+![](P1010494.avif)
+{ mode="lightbox" miniature-width=200 }
+
+![](P1010493.avif)
+{ mode="lightbox" miniature-width=200 }
+
+![detection de forme opencv arduino](P1010492.avif)
+{ mode="lightbox" miniature-width=200 }
+
+![](P1010491.avif)
+{ mode="lightbox" miniature-width=200 }
+
+![](P1010495.avif)
+{ mode="lightbox" miniature-width=200 }
+
+![](P1010496.avif)
+{ mode="lightbox" miniature-width=200 }
+
+![](P1010497.avif)
+{ mode="lightbox" miniature-width=200 }
+
+
+
+{{% /gallery %}}
