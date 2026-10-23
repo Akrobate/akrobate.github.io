@@ -21,7 +21,7 @@ categories:
 cover:
   image: "P1010494.avif"
   alt: "Image d'illustration"
-description:
+description: Découvrez la réalisation d'un robot tourelle suiveur de balles en Lego, combinant la vision par ordinateur avec OpenCV, un contrôleur Teensy et des moteurs Lego Power Functions.
 showTOC: true
 ---
 

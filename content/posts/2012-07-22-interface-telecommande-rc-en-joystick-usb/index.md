@@ -14,17 +14,17 @@ categories:
   - Électronique
   - RC
 cover:
-  image: "/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010424.avif"
+  image: "P1010424.avif"
   alt: "Image d'illustration"
 description: Créez un adaptateur USB pour votre télécommande RC avec Arduino/Teensy. Pilotez vos simulateurs de vol sur PC sans fil via le récepteur radio.
 author: Artiom FEDOROV
-#ShowToc: false
+ShowToc: true
 ---
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010424.avif)
+![](P1010424.avif)
 { .article-image-left mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010400.avif)
+![](P1010400.avif)
 { .article-image-right mode="lightbox" miniature-width=200 }
 
 L'idée de ce projet est de pouvoir **adapter n'importe quelle télécommande de modélisme sur un ordinateur** par le biais du port **USB**. Côté ordinateur, rien d'extraordinaire, on veut simplement obtenir un nouveau **périphérique de type joystick**. Dans mon projet j'utilise une télécommande 4 voies, de ce fait l'adaptateur va "faire croire" (émuler) à l'ordinateur la présence d'un joystick USB 4 axes. La particularité de l'adaptateur vient du fait qu'au lieux d'utiliser la prise écolage sur la télécommande, nous utilisons simplement le récepteur de la télécommande (ou un récepteur compatible à la même fréquence). Ce sont donc les signaux reçus par le récepteur qui seront traités par l'adaptateur. Ce procédé à un avantage incontestable qui est celui de vous offrir la possibilité de vous servir de votre télécommande (sans fils) pour piloter un modèle dans FMS ou votre simulateur ou jeu favoris.
@@ -32,10 +32,10 @@ L'idée de ce projet est de pouvoir **adapter n'importe quelle télécommande d
   
 ## Montage électronique
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010403.avif)
+![](P1010403.avif)
 { .article-image-left mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010409.avif)
+![](P1010409.avif)
 { .article-image-right mode="lightbox" miniature-width=200 }
 
 La partie électronique du montage se limite à un seul composant principal: le teensy2++ (équivalent de l'arduino). Ce circuit se branche en USB au pc, et nous utiliserons quatre entrées digitale pour lire les quartes canaux du récepteur de votre télécommande. Le port USB fournit bien assez d'énergie pour alimenter votre récepteur de télécommande. Ceci est très pratique car vous n'avez donc pas a brancher quelque alimentation que ce soit sur votre récepteur.  
@@ -169,7 +169,7 @@ long ServoRead::getPosition() {
   
 ## Utilisation côté ordinateur
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/fms.avif)
+![](fms.avif)
 { .article-image-left mode="lightbox" miniature-width=200 }
 
 Dans l'absolut le montage est complètement compatible avec tous les systèmes d'exploitation étant donné que l'arduino se comporte comme un joystick standard. De ce fait pour tester l'interface il vous suffit d'utiliser un petit logiciel de configuration de joystick sous linux tel que QJoyPad, sous windows la configuration du joystick peut se faire avec les outils proposés par défaut (dans les propriétés du périphérique). Une fois que l'on s'est assuré que l'interface est opérationnelle, on peut l'utiliser avec [FMS](http://fms.modelisme.com/) par exemple (excellent simulateur de vol de modèles réduits). Le joystick fonctionnera évidement avec tous les jeux ou logiciel supportant le joystick comme périphérique.  
@@ -181,34 +181,34 @@ Dans l'absolut le montage est complètement compatible avec tous les systèmes d
 
 {{% gallery %}}
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010413.avif)
+![](P1010413.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010414.avif)
+![](P1010414.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010415.avif)
+![](P1010415.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010416.avif)
+![](P1010416.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010417.avif)
+![](P1010417.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010418.avif)
+![](P1010418.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010419.avif)
+![](P1010419.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010420.avif)
+![](P1010420.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010421.avif)
+![](P1010421.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010423.avif)
+![](P1010423.avif)
 { mode="lightbox" miniature-width=200 }
 
 {{% /gallery %}}
@@ -220,49 +220,49 @@ Dans l'absolut le montage est complètement compatible avec tous les systèmes d
 
 {{% gallery %}}
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010400.avif)
+![](P1010400.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010401.avif)
+![](P1010401.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010402.avif)
+![](P1010402.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010403.avif)
+![](P1010403.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010404.avif)
+![](P1010404.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010405.avif)
+![](P1010405.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010406.avif)
+![](P1010406.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010409.avif)
+![](P1010409.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010410.avif)
+![](P1010410.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010412.avif)
+![](P1010412.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010424.avif)
+![](P1010424.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010425.avif)
+![](P1010425.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010426.avif)
+![](P1010426.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010428.avif)
+![](P1010428.avif)
 { mode="lightbox" miniature-width=200 }
 
-![](/images/2021-07-22-interface-telecommande-rc-en-joystick-usb/P1010429.avif)
+![](P1010429.avif)
 { mode="lightbox" miniature-width=200 }
 
 {{% /gallery %}}

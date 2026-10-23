@@ -1,0 +1,35 @@
+MiniLCDenUSB.png "Schema electronique de brochage lcd sur arduino"
+P1010479.JPG
+P1010480.JPG
+P1010481.JPG
+P1010482.JPG
+P1010483.JPG
+P1010483.JPG "Ecran lcd avec larduino"
+P1010484.JPG
+P1010484.JPG "Ecran lcd arduino en usb"
+P1010485.JPG
+P1010486.JPG "envoyer commandes depuis le shell vers USB"
+
+
+
+
+MiniLCDenUSB.png
+P1010479.JPG
+P1010480.JPG
+P1010481.JPG
+P1010482.JPG
+P1010483.JPG
+P1010484.JPG
+P1010485.JPG
+P1010486.JPG
+
+
+mv MiniLCDenUSB.png 2012-09-09-mini-ecran-lcd-pour-serveur-linux-en-usb/
+mv P1010479.JPG 2012-09-09-mini-ecran-lcd-pour-serveur-linux-en-usb/
+mv P1010480.JPG 2012-09-09-mini-ecran-lcd-pour-serveur-linux-en-usb/
+mv P1010481.JPG 2012-09-09-mini-ecran-lcd-pour-serveur-linux-en-usb/
+mv P1010482.JPG 2012-09-09-mini-ecran-lcd-pour-serveur-linux-en-usb/
+mv P1010483.JPG 2012-09-09-mini-ecran-lcd-pour-serveur-linux-en-usb/
+mv P1010484.JPG 2012-09-09-mini-ecran-lcd-pour-serveur-linux-en-usb/
+mv P1010485.JPG 2012-09-09-mini-ecran-lcd-pour-serveur-linux-en-usb/
+mv P1010486.JPG 2012-09-09-mini-ecran-lcd-pour-serveur-linux-en-usb/
