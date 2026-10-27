@@ -86,7 +86,8 @@
 
 
 :root {
-  --main-width: 1072px; /* Élargir un peu la largeur max par défaut de PaperMod */
+  --main-width: 1170px; /* Élargir un peu la largeur max par défaut de PaperMod */
+  --nav-width: 1117px;
 }
 
 

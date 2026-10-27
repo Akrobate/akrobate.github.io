@@ -32,7 +32,7 @@ Le **robot suiveur de lignes** est un petit projet très simple. On trace une li
 
 
 ## Le châssis et les capteurs
-  
+
 Le châssis est entièrement réalisé en lego technics issus du set 8275. C'est un bulldozer de lego technics. Ce set comprenait pas mal de pièces intéressantes pour la robotique: 4 moteurs deux récepteurs infrarouges, un pack alimentation et une télécommande infrarouge. Par ailleurs étant donné qu'il s'agit d'un bulldozer le set comprends des chenilles très pratiques pour la motorisation. Pour commander cette base en légo j'émule les signaux de la télécommande officielle en utilisant ma classe arduino LegoRC. Je vous invite a lire l'article sur la [télécommande lego power function et librairie arduino](http://artiom-fedorov.blogspot.fr/2012/05/telecommande-infrarouge-lego-power.html) pour mieux comprendre les détail de l'interface. Donc l'interface entre l'arduino et le châssis lego se limite a une diode infrarouge orientée vers le récepteur lego power functions.  
 Les capteurs de lignes sont simplifiés au maximum. En effet il ne s'agit que d'une simple photo résistance et une diode d'éclairage. Je vous invite aussi a lire l'[article sur ce capteur de lignes](http://artiom-fedorov.blogspot.fr/2012/05/capteur-de-lignes-pour-la-robotique-et.html), et surtout la classe LineSensor pour arduino, qui permet d'utiliser très simlement ce capteur.  
 En ce qui concerne la fixation de la plaque a essai le hasard fait bien les choses ci bien que une des fixations standard de légo rentre pile poil dans les quartes trous dont la plaque a essai est munie. C'est une [plaque a essai relativement basique achetée chez SELECTRONIC](http://www.selectronic.fr/plaque-d-essais-550-points.html).
