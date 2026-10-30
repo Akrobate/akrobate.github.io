@@ -2,7 +2,7 @@
 date: '2015-04-19T14:05:20+02:00'
 draft: false
 title: MantisWeatherTracker script PHP de suivi projet et mémo Git avec GitHub
-slug: Mantis-weather-tracker-script-php-suivi-projet
+slug: mantis-weather-tracker-script-php-suivi-projet
 tags:
   - API
   - gestion de projet
@@ -16,12 +16,9 @@ categories:
 cover:
   image: "weather_tracker.avif"
   alt: "Image d'illustration"
-description: 
+description: Découvrez Mantis Weather Tracker, un script PHP simple pour visualiser l'avancement de vos projets MantisBT sous forme de météo intuitive et ludique.
 showTOC: true
 ---
-
-
-### MantisWeatherTracker script PHP de suivi projet et mémo Git avec GitHub
 
 ![](weather_tracker.avif)
 { .article-image-left mode="lightbox" miniature-width=200 }
@@ -104,11 +101,8 @@ pourcentage = nbrResolus / nbrTotal * 100
 Pour télécharger le projet rendez vous sur GitHub  
   
 [https://github.com/Akrobate/mantisbt-weather-tracker](https://github.com/Akrobate/mantisbt-weather-tracker)  
-  
-  
-  
-  
-  
+
+
 
 ## **Mémo de travail avec git sur GitHub**
 
