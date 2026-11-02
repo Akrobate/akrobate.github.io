@@ -1,0 +1,36 @@
+mv '1-formulaire-site-rempli.png' 2013-08-15-formulaire-de-contact-interface-avec-un-crm-dolibarr/
+mv '2-dolibarr tableau de bord.png' 2013-08-15-formulaire-de-contact-interface-avec-un-crm-dolibarr/
+mv '3-evenement cree.png' 2013-08-15-formulaire-de-contact-interface-avec-un-crm-dolibarr/
+mv '4-fiche evenement cree.png' 2013-08-15-formulaire-de-contact-interface-avec-un-crm-dolibarr/
+mv '5-gmail-evenement-recu.png' 2013-08-15-formulaire-de-contact-interface-avec-un-crm-dolibarr/
+mv 'ajax-loader.gif' 2013-08-15-formulaire-de-contact-interface-avec-un-crm-dolibarr/
+mv 'Script working process connector dolibarr contact - New Page.png' 2013-08-15-formulaire-de-contact-interface-avec-un-crm-dolibarr/
+
+
+
+
+
+
+
+![](exemple-integration-des-qrcodes-dans-salesforce.avif)
+{ .article-image-left mode="lightbox" miniature-width=200 }
+
+![](1.avif)
+{ .article-image-right mode="lightbox" miniature-width=200 }
+
+
+{{% gallery %}}
+
+![](configuration-sales-force.avif)
+{ mode="lightbox" miniature-width=200 }
+
+![](contenu-de-lintegration-iframe-salesforce.avif)
+{ mode="lightbox" miniature-width=200 }
+
+![](creation-nouvelle-page-sales-force.avif)
+{ mode="lightbox" miniature-width=200 }
+
+![](nouvelle-page-visualforce.avif)
+{ mode="lightbox" miniature-width=200 }
+
+{{% /gallery %}}
