@@ -13,8 +13,8 @@ categories:
   - Web
 cover:
   image: "exemple-integration-des-qrcodes-dans-salesforce.avif"
-  alt: "Image d'illustration"
-description: pas de descrition
+  alt: "Capture d'écran montrant l'intégration dynamique de deux QR Codes vCard dans une fiche contact Salesforce"
+description: "Apprenez à intégrer des QR Codes dynamiques dans vos fiches contacts Salesforce grâce à un script PHP et Visualforce. Ajoutez vos contacts en un scan."
 showTOC: true
 ---
 

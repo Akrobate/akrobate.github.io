@@ -10,8 +10,8 @@ categories:
   - Web
 cover:
   image: "nikoniko-php-calendrier-average-small.avif"
-  alt: "Image d'illustration"
-description: 
+  alt: "Interface du calendrier d'humeur Niko Niko PHP avec visualisation des smileys d'équipe"
+description: "Suivez l'humeur de vos équipes Scrum avec notre calendrier Niko Niko innovant en PHP. Votez par simple e-mail et visualisez les tendances et la courbe du moral"
 showTOC: true
 ---
 
