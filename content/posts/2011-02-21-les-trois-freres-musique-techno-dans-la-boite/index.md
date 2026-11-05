@@ -10,7 +10,7 @@ categories:
   - Divers
 cover:
   image: "logo-music-records.avif"
-  alt: "Image d'illustration"
+  alt: "Logo music records"
 description: Musique du film les trois frères où Didier Bourdon et Bernard Campan dansent la boîte de nuit 
 showTOC: true
 ---

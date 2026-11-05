@@ -15,7 +15,7 @@ categories:
   - "Électronique"
 cover:
   image: "telecommande-lego-et-recepteur.avif"
-  alt: "Image d'illustration"
+  alt: "Image d'illustration du prototype sur bread board de la télécommande lego"
 description: Découvrez comment contrôler le récepteur infrarouge LEGO Power Functions avec une carte Arduino/Teensy et la librairie LegoRC pour gérer la vitesse et le freinage.
 showTOC: true
 ---

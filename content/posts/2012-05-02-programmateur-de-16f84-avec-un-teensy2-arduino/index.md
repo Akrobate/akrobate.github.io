@@ -14,8 +14,8 @@ categories:
   - Électronique
 cover:
   image: PICT0006.avif
-  alt: "Image d'illustration"
-description: 
+  alt: "montage et câblage électronique reliant un microcontrôleur PIC 16F84 à une carte Teensy / Arduino pour la programmation in-situ."
+description: Apprenez à programmer un microcontrôleur PIC 16F84 en direct à l'aide d'une carte Teensy / Arduino grâce à notre bibliothèque dédiée et son tutoriel.
 showTOC: true
 ---
 

@@ -18,7 +18,7 @@ categories:
 showTOC: true
 cover:
   image: "robot-suiveur-de-lignes-main.avif"
-  alt: "Image d'illustration"
+  alt: "Image d'illustration du robot suiveur de lignes en lego"
 description: Découvrez comment fabriquer un robot suiveur de lignes autonome piloté par un microcontrôleur Teensy (Arduino), avec un châssis Lego Technic et des moteurs contrôlés par infrarouge. Tutoriel complet avec code source, schémas électroniques et explications.
 ---
 

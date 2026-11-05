@@ -13,8 +13,8 @@ categories:
   - Électronique
 cover:
   image: P1010002.avif
-  alt: "Image d'illustration"
-description: No description
+  alt: "Illustration servo moteur"
+description: "Apprenez à connaître la position exacte d'un servomoteur en temps réel grâce à une modification simple : souder un fil sur son potentiomètre interne !"
 showTOC: true
 ---
 

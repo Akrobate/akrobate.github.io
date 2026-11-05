@@ -15,7 +15,7 @@ categories:
   - RC
 cover:
   image: "P1010424.avif"
-  alt: "Image d'illustration"
+  alt: "Image d'illustration d'une télécommande vintage"
 description: Créez un adaptateur USB pour votre télécommande RC avec Arduino/Teensy. Pilotez vos simulateurs de vol sur PC sans fil via le récepteur radio.
 author: Artiom FEDOROV
 ShowToc: true

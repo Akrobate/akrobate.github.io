@@ -12,7 +12,7 @@ categories:
   - Robotique
 cover:
   image: P1010101.avif
-  alt: Image d'illustration
+  alt: "Image d'illustration du robot automate pneumatique en lego"
 ShowToc: true
 description: Concevez un robot automate Lego Technic à 6 pattes ! Apprenez à créer des portes logiques pneumatiques avec des vérins pour programmer ses mouvements.
 

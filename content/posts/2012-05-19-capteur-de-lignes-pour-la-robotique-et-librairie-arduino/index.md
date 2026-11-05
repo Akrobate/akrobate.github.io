@@ -14,8 +14,8 @@ categories:
   - Électronique
 cover:
   image: capteur-de-lignes-pour-robot-boitier-lego.avif
-  alt: "Image d'illustration"
-description: 
+  alt: "Image d'illustration d'un capteur de ligne en lego"
+description: "Créez un capteur de lignes sur mesure avec des pièces LEGO et Arduino."
 showTOC: true
 ---
 
