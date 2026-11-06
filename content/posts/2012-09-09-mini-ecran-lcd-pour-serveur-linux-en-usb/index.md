@@ -16,7 +16,7 @@ cover:
   image: "P1010484.avif"
   alt: "Image d'illustration du montage de l'écran LCD en usb"
   hiddenInSingle: true
-description: Découvrez comment fabriquer un mini écran LCD USB avec un Teensy ou Arduino pour suivre vos scripts et processus Linux en temps réel depuis votre serveur.
+description: "Découvrez comment fabriquer un mini écran LCD USB avec un Teensy ou Arduino pour suivre vos scripts et processus Linux en temps réel depuis votre serveur."
 showTOC: true
 ---
 

@@ -11,8 +11,8 @@ categories:
   - Web
 cover:
   image: 1-formulaire-site-rempli.avif
-  alt: "Image d'illustration"
-description: pas de descrition
+  alt: "Exemple de formulaire integré avec le CRM dolibarr"
+description: Découvrez comment synchroniser automatiquement les formulaires de contact de votre site web avec votre CRM Dolibarr grâce à une solution simple en PHP/JS. Centralisez vos prospects et gagnez en efficacité !
 showTOC: true
 ---
 

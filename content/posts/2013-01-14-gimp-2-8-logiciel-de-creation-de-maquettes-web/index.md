@@ -10,7 +10,7 @@ categories:
   - Web
 cover:
   image: "Logo-Gimp-2-8.avif"
-  alt: "Image d'illustration"
+  alt: "logo du logiciel d'édition d'images GIMP"
 description: "Découvrez comment Gimp 2.8 devient une alternative sérieuse à Photoshop pour le webdesign grâce à ses nouveautés majeures: groupes de calques et mode fenêtre unique"
 showTOC: true
 ---

@@ -15,7 +15,7 @@ categories:
   - Web
 cover:
   image: "weather_tracker.avif"
-  alt: "Image d'illustration"
+  alt: "Logo du projet weather tracker"
 description: Découvrez Mantis Weather Tracker, un script PHP simple pour visualiser l'avancement de vos projets MantisBT sous forme de météo intuitive et ludique.
 showTOC: true
 ---
