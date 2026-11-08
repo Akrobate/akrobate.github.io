@@ -26,9 +26,9 @@
     <div>
       <h3>Tags</h3>
       <ul class="terms-tags-mini">
-        {{- range $name, $items := site.Taxonomies.tags }}
+        {{- range sort site.Taxonomies.tags "Len" "desc" }}
         <li>
-          <a href="{{ "tags/" | relLangURL }}{{ $name | urlize }}">{{ $name | humanize }} ({{ len $items }})</a>
+          <a href="{{ "tags/" | relLangURL }}{{ .Page.Title | urlize }}">{{ .Page.Title | humanize }} ({{ len .Pages }})</a>
         </li>
         {{- end }}
       </ul>
