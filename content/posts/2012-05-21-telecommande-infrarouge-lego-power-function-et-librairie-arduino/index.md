@@ -8,11 +8,8 @@ tags:
   - electronique
   - informatique
   - lego
-  - lego power functions
-  - librairie arduino
-  - telecommande lego
 categories:
-  - "Électronique"
+  - Électronique
 cover:
   image: "telecommande-lego-et-recepteur.avif"
   alt: "Image d'illustration du prototype sur bread board de la télécommande lego"

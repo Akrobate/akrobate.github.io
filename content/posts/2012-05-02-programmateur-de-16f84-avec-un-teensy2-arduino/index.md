@@ -2,7 +2,7 @@
 date: '2012-05-02T14:05:20+02:00'
 draft: false
 title: Programmateur de 16F84 avec un Teensy++ (Arduino)
-slug: programmateur-16F84-avec-arduino
+slug: programmateur-16f84-avec-arduino
 tags:
   - 16f84
   - arduino
