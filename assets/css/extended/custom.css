@@ -261,6 +261,11 @@
   margin: 0;
 }
 
+.md-content ol,
+.md-content ul {
+  display: flow-root;
+}
+
 .gallery-grid a:has(> img) {
   display: block;
   width: 100%;
