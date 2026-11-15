@@ -18,8 +18,21 @@ markup:
 #    noClasses: false
 
 params:
+  comments: true
   cover:
     hiddenInSingle: true
+  giscus:
+    repo: "Akrobate/akrobate.github.io"
+    repoId: "R_kgDOUpvtQQ"
+    category: "Comments"
+    categoryId: "DIC_kwDOUpvtQc4DLMeK"
+    mapping: "pathname"
+    strict: "0"
+    reactionsEnabled: "1"
+    emitMetadata: "0"
+    inputPosition: "bottom"
+    theme: "preferred_color_scheme"
+    lang: "fr"
 
 menu:
   main:

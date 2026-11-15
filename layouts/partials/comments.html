@@ -1,0 +1,82 @@
+<script>
+(function () {
+    const getTheme = () => {
+        const theme = document.documentElement.getAttribute("data-theme");
+
+        if (theme === "dark") return "dark";
+        if (theme === "light") return "light";
+
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+    };
+
+    // Création du script Giscus avec le thème actuel
+    const giscusScript = document.createElement("script");
+
+    giscusScript.src = "https://giscus.app/client.js";
+    giscusScript.async = true;
+    giscusScript.crossOrigin = "anonymous";
+
+    giscusScript.setAttribute("data-repo", "Akrobate/akrobate.github.io");
+    giscusScript.setAttribute("data-repo-id", "R_kgDOUpvtQQ");
+    giscusScript.setAttribute("data-category", "Comments");
+    giscusScript.setAttribute("data-category-id", "DIC_kwDOUpvtQc4DLMeK");
+    giscusScript.setAttribute("data-mapping", "pathname");
+    giscusScript.setAttribute("data-strict", "0");
+    giscusScript.setAttribute("data-reactions-enabled", "1");
+    giscusScript.setAttribute("data-emit-metadata", "0");
+    giscusScript.setAttribute("data-input-position", "bottom");
+    giscusScript.setAttribute("data-theme", getTheme());
+    giscusScript.setAttribute("data-lang", "fr");
+
+    // Synchronisation du thème avec Giscus
+    function updateGiscusTheme() {
+        const iframe = document.querySelector(".giscus-frame");
+
+        if (!iframe) return;
+
+        iframe.contentWindow.postMessage(
+            {
+                giscus: {
+                    setConfig: {
+                        theme: getTheme()
+                    }
+                }
+            },
+            "https://giscus.app"
+        );
+    }
+
+    // Observer les changements de thème de PaperMod
+    const observer = new MutationObserver(() => {
+        updateGiscusTheme();
+    });
+
+    observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["data-theme"]
+    });
+
+    // Suivre également les changements de thème système
+    window.matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", updateGiscusTheme);
+
+    // Détecter le chargement de l'iframe Giscus
+    const iframeObserver = new MutationObserver(() => {
+        const iframe = document.querySelector(".giscus-frame");
+
+        if (iframe && !iframe.dataset.themeListener) {
+            iframe.dataset.themeListener = "true";
+            iframe.addEventListener("load", updateGiscusTheme);
+        }
+    });
+
+    iframeObserver.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+
+    document.currentScript.after(giscusScript);
+})();
+</script>
