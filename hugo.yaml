@@ -31,7 +31,8 @@ params:
     reactionsEnabled: "1"
     emitMetadata: "0"
     inputPosition: "bottom"
-    theme: "preferred_color_scheme"
+    themeDark: "noborder_gray"
+    themeLight: "light"
     lang: "fr"
 
 menu:

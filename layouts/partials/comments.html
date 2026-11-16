@@ -3,34 +3,32 @@
     const getTheme = () => {
         const theme = document.documentElement.getAttribute("data-theme");
 
-        if (theme === "dark") return "dark";
-        if (theme === "light") return "light";
+        if (theme === "dark") return "{{ site.Params.giscus.themeDark }}";
+        if (theme === "light") return "{{ site.Params.giscus.themeLight }}";
 
         return window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
+            ? "{{ site.Params.giscus.themeDark }}"
+            : "{{ site.Params.giscus.themeLight }}";
     };
 
-    // Création du script Giscus avec le thème actuel
     const giscusScript = document.createElement("script");
 
     giscusScript.src = "https://giscus.app/client.js";
     giscusScript.async = true;
     giscusScript.crossOrigin = "anonymous";
 
-    giscusScript.setAttribute("data-repo", "Akrobate/akrobate.github.io");
-    giscusScript.setAttribute("data-repo-id", "R_kgDOUpvtQQ");
-    giscusScript.setAttribute("data-category", "Comments");
-    giscusScript.setAttribute("data-category-id", "DIC_kwDOUpvtQc4DLMeK");
-    giscusScript.setAttribute("data-mapping", "pathname");
-    giscusScript.setAttribute("data-strict", "0");
-    giscusScript.setAttribute("data-reactions-enabled", "1");
-    giscusScript.setAttribute("data-emit-metadata", "0");
-    giscusScript.setAttribute("data-input-position", "bottom");
+    giscusScript.setAttribute("data-repo", "{{ site.Params.giscus.repo }}");
+    giscusScript.setAttribute("data-repo-id", "{{ site.Params.giscus.repoId }}");
+    giscusScript.setAttribute("data-category", "{{ site.Params.giscus.category }}");
+    giscusScript.setAttribute("data-category-id", "{{ site.Params.giscus.categoryId }}");
+    giscusScript.setAttribute("data-mapping", "{{ site.Params.giscus.mapping }}");
+    giscusScript.setAttribute("data-strict", "{{ site.Params.giscus.strict }}");
+    giscusScript.setAttribute("data-reactions-enabled", "{{ site.Params.giscus.reactionsEnabled }}");
+    giscusScript.setAttribute("data-emit-metadata", "{{ site.Params.giscus.emitMetadata }}");
+    giscusScript.setAttribute("data-input-position", "{{ site.Params.giscus.inputPosition }}");
     giscusScript.setAttribute("data-theme", getTheme());
-    giscusScript.setAttribute("data-lang", "fr");
+    giscusScript.setAttribute("data-lang", "{{ site.Params.giscus.lang }}");
 
-    // Synchronisation du thème avec Giscus
     function updateGiscusTheme() {
         const iframe = document.querySelector(".giscus-frame");
 
@@ -48,7 +46,6 @@
         );
     }
 
-    // Observer les changements de thème de PaperMod
     const observer = new MutationObserver(() => {
         updateGiscusTheme();
     });
@@ -58,11 +55,9 @@
         attributeFilter: ["data-theme"]
     });
 
-    // Suivre également les changements de thème système
     window.matchMedia("(prefers-color-scheme: dark)")
         .addEventListener("change", updateGiscusTheme);
 
-    // Détecter le chargement de l'iframe Giscus
     const iframeObserver = new MutationObserver(() => {
         const iframe = document.querySelector(".giscus-frame");
 
