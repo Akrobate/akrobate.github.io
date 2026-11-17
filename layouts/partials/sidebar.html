@@ -27,10 +27,15 @@
       <h3>Tags</h3>
       <ul class="terms-tags-mini">
         {{- range sort site.Taxonomies.tags "Len" "desc" }}
-        <li>
-          <a href="{{ "tags/" | relLangURL }}{{ .Page.Title | urlize }}">{{ .Page.Title | humanize }} ({{ len .Pages }})</a>
-        </li>
+          {{- if  gt (len .Pages) 1 -}}
+          <li>
+            <a href="{{ "tags/" | relLangURL }}{{ .Page.Title | urlize }}">{{ .Page.Title | humanize }} ({{ len .Pages }})</a>
+          </li>
+          {{- end -}}
         {{- end }}
+        <li>
+          <a href="/tags" title="Tous les tags"> ... </a>
+        </li>
       </ul>
     </div>
 
