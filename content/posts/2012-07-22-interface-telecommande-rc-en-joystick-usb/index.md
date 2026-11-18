@@ -7,7 +7,6 @@ tags:
   - arduino
   - electronique
   - informatique
-  - servo moteur
   - teensy
   - telecommande RC
 categories:

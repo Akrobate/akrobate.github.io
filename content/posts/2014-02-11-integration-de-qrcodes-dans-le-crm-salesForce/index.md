@@ -4,7 +4,6 @@ draft: false
 title: Intégration de QRcodes dans le CRM SalesForce
 slug: integration-qrcodes-dans-salesforce
 tags:
-  - apex
   - CRM
   - php
   - QRCode

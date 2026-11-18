@@ -5,12 +5,9 @@ title: "Robot suiveur de lignes a base du teensy (arduino)"
 slug: "robot-suiveur-de-lignes-teensy"
 tags:
   - arduino
-  - capteur de lignes
   - electronique
   - informatique
   - robot
-  - robot suiveur de lignes
-  - robotique
   - teensy
   - telecommande lego
 categories:

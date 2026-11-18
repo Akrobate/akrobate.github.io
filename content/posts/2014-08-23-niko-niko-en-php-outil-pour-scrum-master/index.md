@@ -5,6 +5,7 @@ title: Niko Niko en PHP outil pour Scrum Master
 slug: niko-niko-outil-scrum-master
 tags:
   - php
+  - informatique
   - scrum
 categories:
   - Web

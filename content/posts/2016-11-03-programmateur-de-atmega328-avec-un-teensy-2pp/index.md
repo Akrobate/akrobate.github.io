@@ -4,10 +4,12 @@ draft: false
 title: Programmateur de atmega328 avec un teensy 2++
 slug: programmateur-atmega328-avec-un-teensy
 tags:
+  - electronique
   - arduino
   - informatique
   - teensy
   - atmega328p
+  - programmateur
 categories:
   - électronique
 cover:

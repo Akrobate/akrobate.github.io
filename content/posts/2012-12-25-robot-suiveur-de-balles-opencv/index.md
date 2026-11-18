@@ -5,14 +5,11 @@ title: "Robot suiveur de balles OpenCV (Projet expérimental)"
 slug: "robot-suiveur-de-balles-opencv"
 tags:
   - arduino
-  - Artiom FEDOROV
   - electronique
   - informatique
   - lego
-  - lego power functions
   - OpenCV
   - robot
-  - robotique
   - teensy
   - telecommande lego
   - telecommande RC

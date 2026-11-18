@@ -8,7 +8,7 @@ tags:
   - arduino
   - electronique
   - informatique
-  - programmateur 16f84
+  - programmateur
   - teensy
 categories:
   - Électronique

@@ -4,13 +4,9 @@ draft: false
 title: MantisWeatherTracker script PHP de suivi projet et mémo Git avec GitHub
 slug: mantis-weather-tracker-script-php-suivi-projet
 tags:
-  - API
   - gestion de projet
   - informatique
-  - mantisBT
   - php
-  - script php
-  - SOAP
 categories:
   - Web
 cover:

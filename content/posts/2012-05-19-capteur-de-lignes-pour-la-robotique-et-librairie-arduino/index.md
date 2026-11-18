@@ -5,11 +5,8 @@ title: Capteur de lignes pour la robotique et librairie arduino
 slug: capteur-lignes-pour-robotique-et-librairie-arduino
 tags:
   - arduino
-  - capteur de lignes
   - electronique
   - lego
-  - robot
-  - robotique
 categories:
   - Électronique
 cover:

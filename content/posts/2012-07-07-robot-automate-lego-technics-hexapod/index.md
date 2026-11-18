@@ -4,10 +4,8 @@ draft: false
 title: "Robot automate Lego Technics Hexapod"
 slug: "robot-automate-lego-technics-hexapod"
 tags:
-  - automate
   - lego
   - robot
-  - robotique
 categories:
   - Robotique
 cover:
