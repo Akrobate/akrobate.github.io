@@ -113,6 +113,11 @@
   border: 1px solid var(--border);
 }
 
+.widget .social {
+  margin-top: 1em;
+}
+
+
 .sidebar-inner h3 {
   margin-bottom: 0.75rem;
   font-size: 1.1rem;
