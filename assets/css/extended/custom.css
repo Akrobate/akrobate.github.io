@@ -15,6 +15,7 @@
     margin: 0.5rem 0 0 1.0rem !important;
 }
 
+
 @media (max-width: 600px) {
     .article-image {
         float: none;
@@ -213,9 +214,6 @@
     transition: transform 0.1s;
 }
 
-
-
-
 .categories {
     margin-top: var(--content-gap);
 }
@@ -275,8 +273,3 @@
   display: block;
   width: 100%;
 }
-
-
-
-
-
