@@ -95,6 +95,7 @@
 
 .site-layout .main {
   max-width: 100%;
+  min-width: 0;
   margin: 0px !important;
   padding: 0px !important;
 }
@@ -272,20 +273,4 @@
 .gallery-grid a:has(> img) {
   display: block;
   width: 100%;
-}
-
-/* assets/css/extended/custom.css */
-.main,
-.post-single,
-.post-content,
-.post-content .highlight {
-  min-width: 0;
-  max-width: 100%;
-}
-
-/* Force le scroll horizontal sur le bloc de code ou le wrapper Chroma */
-.post-content .highlight,
-.post-content pre {
-  overflow-x: auto;
-  max-width: 100%;
 }
