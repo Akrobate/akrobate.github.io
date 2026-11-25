@@ -137,10 +137,7 @@
   }
 }
 
-
-
 /* pinned articles */
-
 .pinned-article-list {
   margin-top: 1.2rem;
   display: flex;
@@ -193,27 +190,28 @@
 
 
 /* terms-tagmini */
-
 .terms-tags-mini {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5em;
     margin-top: var(--content-gap);
+
+    li {
+        display: inline-block;
+        font-weight: 500;
+    }
+
+    a {
+        display: block;
+        padding: 2px 10px;
+        background: var(--tertiary);
+        border-radius: var(--radius);
+        font-size: 0.9rem;
+        transition: transform 0.1s;
+    }
 }
 
-.terms-tags-mini li {
-    display: inline-block;
-    font-weight: 500;
-}
 
-.terms-tags-mini a {
-    display: block;
-    padding: 2px 10px;
-    background: var(--tertiary);
-    border-radius: var(--radius);
-    font-size: 0.9rem;
-    transition: transform 0.1s;
-}
 
 .categories {
     margin-top: var(--content-gap);
