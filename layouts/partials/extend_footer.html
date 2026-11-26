@@ -5,3 +5,27 @@
     const lightbox = GLightbox({ selector: '.glightbox' });
   });
 </script>
+<script>
+  (function () {
+    var btn = document.querySelector(".sidebar-toggle");
+    var backdrop = document.querySelector(".sidebar-backdrop");
+    var sidebar = document.getElementById("sidebar");
+    if (!btn || !sidebar) return;
+    function set(open) {
+      document.body.classList.toggle("sidebar-open", open);
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.setAttribute("aria-label", open ? "Fermer le panneau" : "Ouvrir le panneau");
+      backdrop.hidden = !open;
+    }
+    btn.addEventListener("click", function () {
+      set(!document.body.classList.contains("sidebar-open"));
+    });
+    backdrop.addEventListener("click", function () { set(false); });
+    sidebar.addEventListener("click", function (e) {
+      if (e.target.closest("a")) set(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") set(false);
+    });
+  })();
+</script>

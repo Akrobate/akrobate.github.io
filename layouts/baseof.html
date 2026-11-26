@@ -22,7 +22,14 @@
 <body id="top">
 {{- end }}
 
-    {{ partialCached "header.html" . .Page -}}
+    <div class="site-header">
+        {{ partialCached "header.html" . .Page -}}
+        <button type="button" class="sidebar-toggle" aria-controls="sidebar" aria-expanded="false" aria-label="Ouvrir le panneau">
+            <svg class="icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+    </div>
+    <div class="sidebar-backdrop" hidden></div>
 
     <div class="site-layout">
 
